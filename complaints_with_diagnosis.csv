@@ -1,0 +1,25 @@
+Disease,Fever,Cough,Fatigue,Difficulty Breathing,Age,Gender,Blood Pressure,Cholesterol Level,Outcome Variable,Imaginative_Complaint,Predicted_Diagnosis,Explanation,Match_with_Database
+Gastroenteritis,Yes,Yes,Yes,No,30,Male,High,High,Negative,"As a 30-year-old male, I’ve recently started experiencing fever, cough, fatigue over the last couple of days. It’s starting to worry me because I’ve never felt this weak before. I suspect it could be gastroenteritis, but I’m not sure. My blood pressure is high and cholesterol is high.",Unknown,"```json
+{
+  ""diagnosis"": ""Influenza"",
+  ""explanation"": ""The symptoms of fever, cough, and fatigue are classic signs of influenza, which is a common viral infection that affects the respiratory system. The sudden onset of these symptoms, along with the patient's description of feeling unusually weak, aligns with the typical presentation of the flu. While high blood pressure and cholesterol are noted, they are not directly related to the acute symptoms described.""
+}
+```",False
+Hepatitis,Yes,Yes,Yes,Yes,30,Male,High,Normal,Negative,"I am a 30-year-old male, and lately I have been dealing with fever, cough, fatigue, difficulty breathing over the last couple of days. It’s starting to worry me because I’ve never felt this weak before. My family thinks it could be hepatitis. My blood pressure is high and cholesterol is normal.",Unknown,"```json
+{
+  ""diagnosis"": ""COVID-19"",
+  ""explanation"": ""The symptoms of fever, cough, fatigue, and difficulty breathing are commonly associated with COVID-19. These symptoms, combined with the sudden onset and severity, align with the presentation of a respiratory viral infection like COVID-19, rather than hepatitis, which typically presents with jaundice and liver-related symptoms.""
+}
+```",False
+Kidney Cancer,No,No,Yes,No,30,Male,Normal,Normal,Negative,"As a 30-year-old male, I’ve recently started experiencing fatigue over the last couple of days. It makes everyday activities, like walking or working, much harder. This feels worse than a typical illness, maybe it’s kidney cancer. My blood pressure is normal and cholesterol is normal.",Unknown,"```json
+{
+  ""diagnosis"": ""Fatigue due to stress or overexertion"",
+  ""explanation"": ""The patient's symptoms of fatigue without other significant symptoms like high blood pressure or abnormal cholesterol levels suggest a non-specific cause such as stress or overexertion. Kidney cancer is less likely given the absence of other typical symptoms such as blood in urine or unexplained weight loss.""
+}
+```",False
+Migraine,Yes,No,No,No,30,Female,Normal,Normal,Negative,"I am a 30-year-old female, and lately I have been dealing with fever for about a week now. I feel drained and cannot focus on my daily tasks. I’m concerned it might be related to migraine. My blood pressure is normal and cholesterol is normal.",Unknown,"```json
+{
+  ""diagnosis"": ""Viral infection"",
+  ""explanation"": ""The symptoms of fever, fatigue, and inability to focus are common in viral infections. The normal blood pressure and cholesterol levels, along with the absence of specific migraine symptoms, make a viral infection a more likely cause of the current symptoms.""
+}
+```",False
