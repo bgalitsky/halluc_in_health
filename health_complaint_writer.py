@@ -4,7 +4,7 @@ import pandas as pd
 import openai
 
 # Load your dataset
-df = pd.read_csv("Disease_symptom_and_patient_profile_dataset.csv")
+df = pd.read_csv("data/Disease_symptom_and_patient_profile_dataset.csv")
 
 # Load configuration
 config = RawConfigParser()

@@ -26,7 +26,7 @@ def load_data():
     path = kagglehub.dataset_download("uom190346a/disease-symptoms-and-patient-profile-dataset")
 
     print("Path to dataset files:", path)
-    df = pd.read_csv('Disease_symptom_and_patient_profile_dataset.csv')  # Update path as needed
+    df = pd.read_csv('data/Disease_symptom_and_patient_profile_dataset.csv')  # Update path as needed
     print("Data shape:", df.shape)
     print("\nFirst few rows:")
     print(df.head())
