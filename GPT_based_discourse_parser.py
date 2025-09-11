@@ -77,10 +77,6 @@ def validate_relation(label: str) -> bool:
     """Check if relation label is valid RST-DT relation."""
     return label in ALL_RST_RELATIONS
 
-print(validate_relation("Elaboration"))   # True
-print(validate_relation("Motivation"))    # True
-print(validate_relation("RandomLabel"))   # False
-
 def analyze_rst(text: str):
     """
     Sends text to ChatGPT and returns:
@@ -133,20 +129,20 @@ You are an RST discourse parser.
 Segment the following text into Elementary Discourse Units (EDUs).
 Then build an RST tree in this explicit Python dict format:
 
-{
-  "edu": "<text of nucleus EDU or None>",
-  "relation": "<RST relation label or None>",
+{{
+  "edu": <text of nucleus EDU or None>,
+  "relation": <RST relation label or None>,
   "nucleus": <subtree or None>,
   "satellites": [
-      {
-         "edu": "<text of satellite EDU>",
-         "relation": "<relation to its nucleus>",
+      {{
+         "edu": <text of satellite EDU>,
+         "relation": <relation to its nucleus>,
          "nucleus": None,
          "satellites": []
-      },
+      }},
       ...
   ]
-}
+}}
 
 Rules:
 - Each EDU must appear exactly once in the tree.
@@ -157,10 +153,10 @@ Text:
 {text}
 
 Return only valid Python code for a dict:
-{
+{{
   "tree": <the nested RST tree>,
   "dependent_satellites": [<list of EDU strings>]
-}
+}}
     """
 
     response = client.chat.completions.create(
