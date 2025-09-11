@@ -183,7 +183,7 @@ def render_tree_ui(node_dict, level=0):
 
 # ---- Streamlit UI ----
 st.title("📖 RST Discourse Parser")
-st.markdown("[Институт Искусственного Интеллекта МФТИ] (https://iai.mipt.ru/en)")
+st.markdown("Stavropol Agrarian University")
 with st.expander("What is Discourse Analysis and how it is applied?"):
     st.write("""
     Discourse analysis is the study of how language is structured beyond the level of individual sentences. 
@@ -203,9 +203,6 @@ with st.expander("What is Discourse Analysis and how it is applied?"):
     By segmenting text into EDUs and mapping the relations between them, discourse analysis allows both humans and machines to capture the deeper meaning of a text, detect the logical flow of information, and identify which parts of the text are essential versus supportive. 
     This structured understanding is crucial for improving communication, automating text understanding, and supporting advanced AI applications.
     """)
-
-st.text("Also fastapi endpoingt is available: http://...:8000/docs")
-
 # ---- Caching wrapper (prevents re-asking GPT for same text) ----
 @st.cache_data(show_spinner=False)
 def cached_parse(text: str):
