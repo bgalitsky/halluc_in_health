@@ -35,13 +35,16 @@ def text_to_prolog_facts(text):
     Use lowercase predicate names and atoms. Use single noun (subject) with a concrete meanining or linguistic predicate for predicate name.
     Use variables (starting with uppercase) in rules.
     Only output valid Prolog code, one fact/rule per line.
-
     Example:
-    Input: "Alice is a cat. Cats are animals. Bob likes all animals."
-    Output:
-    cat(alice).
-    animal(X) :- cat(X).
-    likes(bob, X) :- animal(X).
+     % Ontology rules for gout
+    
+    inflammation(joints(A)) :- joints(A), member(A, [one, few, both, multiple, toe, knee, ankle]).
+    inflammation(pain(S)) :- pain(S), member(S, [painfull, severe, throbbing, crushing, excruciating]).
+    inflammation(property(C)) :- property(C), member(C, [red, warm, tender, swollen, fever]).
+    inflammation(last(L)) :- last(L), member(L, [few_days, return, additional(longer)]).
+    
+    % Disease definition
+    disease(gout) :- inflammation(joints(A)),  inflammation(pain(S)), inflammation(property(C)), inflammation(last(L)).
 
     Now process this text:
     "{text}"
@@ -79,17 +82,15 @@ def add_to_prolog_knowledge_base(prolog_code):
 # Step 5: Convert Question → Prolog Query Goal
 # -------------------------------
 
-def question_to_prolog_query(question, context_text, list_of_predicates):
+def question_to_prolog_query(symptoms, ontology, list_of_predicates):
     prompt = f"""
-    Given the following context and a question, convert the question into a Prolog query (goal).
-    Return only the query, ending with a period. Use only predicates from specified list {list_of_predicates}
+    Represent a list of symptoms such as a patient complains in prolog form as a list of facts each ending with '.'
+    Use only predicates from specified list {list_of_predicates}
 
-    Context:
-    {context_text}
+    ontology that should be satisfied by these facts:
+    {ontology}
     
-    Question: {question}
-
-    Prolog query (use correct syntax, variables as uppercase, no explanation):
+    Symptoms: {symptoms}
     """
 
     response = client.chat.completions.create(
@@ -112,7 +113,18 @@ def question_to_prolog_query(question, context_text, list_of_predicates):
 # -------------------------------
 def run_prolog_query(query):
     try:
-        results = list(prolog.query(query))
+        # Split input into facts
+        facts = [f.strip().rstrip('.') for f in query.split("\n") if f.strip()]
+        # Assert facts temporarily
+        for fact in facts:
+            prolog.assertz(fact)
+
+        results = list(prolog.query("disease(D)"))
+        # todo: auto extract this goal from left-bottom corner of ontology
+
+        # Retract facts after query
+        for fact in facts:
+            prolog.retract(fact)
         if results:
             print("✅ Answer (Prolog results):")
             for result in results:

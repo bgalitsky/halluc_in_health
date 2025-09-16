@@ -57,7 +57,7 @@ if st.button("Run GPT & Prolog pipeline"):
 
             # 4. Prolog query
             list_of_predicates = extract_prolog_predicates(ontology_prolog)
-            query_prolog = question_to_prolog_query(user_query, ontology_text, list_of_predicates)
+            query_prolog = question_to_prolog_query(user_query, ontology_prolog, list_of_predicates)
 
             # 5. Run Prolog query
             results, eliminated = run_prolog_query_relaxed(query_prolog)
