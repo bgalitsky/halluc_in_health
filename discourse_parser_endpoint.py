@@ -2,6 +2,9 @@
 
 from discourse_parser_app import analyze_rst1
 
+#nohup python3 fastapi_rst_service.py > fastapi.log 2>&1 &
+#http://54.82.56.2:8000/docs#/default/analyze_analyze_post
+#
 
 from fastapi import FastAPI
 from pydantic import BaseModel

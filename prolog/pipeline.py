@@ -32,7 +32,8 @@ prolog = Prolog()  # Initialize Prolog engine
 def text_to_prolog_facts(text):
     prompt = f"""
     Convert the following natural language text into logical Prolog facts and rules.
-    Use lowercase predicate names and atoms. Use variables (starting with uppercase) in rules.
+    Use lowercase predicate names and atoms. Use single noun (subject) with a concrete meanining or linguistic predicate for predicate name.
+    Use variables (starting with uppercase) in rules.
     Only output valid Prolog code, one fact/rule per line.
 
     Example:

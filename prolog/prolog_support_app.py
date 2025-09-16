@@ -91,7 +91,13 @@ if st.button("Rerun with Edited Ontology"):
     result = run_prolog_query(st.session_state.query_prolog)
     st.session_state.ontology_text = edited_ontology_text
     st.session_state.ontology_prolog = ontology_prolog
-    st.session_state.result = result
+    results_str = [str(r) for r in results]
+    eliminated_str = [str(r) for r in eliminated]
+
+    st.session_state.result = (
+            "✅ Results:\n" + "\n".join(results_str) +
+            "\n\n❌ Eliminated clauses:\n" + "\n".join(eliminated_str)
+    )
 
 
 st.subheader("3. Ontology in Prolog")
@@ -103,7 +109,13 @@ edited_query_prolog = st.text_area("Prolog Query (editable):", st.session_state.
 if st.button("Rerun with Edited Query"):
     results, eliminated = run_prolog_query_relaxed(edited_query_prolog)
     st.session_state.query_prolog = edited_query_prolog
-    st.session_state.result = result
+    results_str = [str(r) for r in results]
+    eliminated_str = [str(r) for r in eliminated]
+
+    st.session_state.result = (
+            "✅ Results:\n" + "\n".join(results_str) +
+            "\n\n❌ Eliminated clauses:\n" + "\n".join(eliminated_str)
+    )
 
 st.subheader("5. Prolog Query Result")
 st.text_area("Result:", st.session_state.result, height=150, disabled=True)

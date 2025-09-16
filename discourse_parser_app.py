@@ -8,7 +8,7 @@ import os
 import ast
 from functools import lru_cache
 
-
+#ssh -i C:\Users\User\.ssh\aws_ec2_key.pem ec2-user@54.82.56.2
 
 # Load configuration
 config = RawConfigParser()
