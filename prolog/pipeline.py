@@ -1,3 +1,5 @@
+from mailcap import subst
+
 from pyswip import Prolog
 from openai import OpenAI
 from configparser import RawConfigParser
@@ -34,8 +36,16 @@ def text_to_prolog_facts(text):
     Convert the following natural language text into logical Prolog facts and rules.
     Use lowercase predicate names and atoms. Use single noun (subject) with a concrete meanining or linguistic predicate for predicate name.
     Use variables (starting with uppercase) in rules.
-    Only output valid Prolog code, one fact/rule per line.
+    Only output valid Prolog code, one rule per line. Only rules, no facts should be extracted.
     Example:
+     % ontology text
+    In most cases, only one or a few joints are affected. The big toe, knee, or ankle joints are most often affected.
+    Sometimes many joints become swollen and painful.
+    The pain starts suddenly, often during the night. Pain is often severe, described as throbbing, crushing, or excruciating.
+    The joint appears warm and red. It is most often very tender and swollen (it hurts to put a sheet or blanket over it).
+    There may be a fever.
+    The attack may go away in a few days, but may return from time to time. Additional attacks often last longer.
+    
      % Ontology rules for gout
     
     inflammation(joints(A)) :- joints(A), member(A, [one, few, both, multiple, toe, knee, ankle]).
@@ -81,16 +91,29 @@ def add_to_prolog_knowledge_base(prolog_code):
 # -------------------------------
 # Step 5: Convert Question → Prolog Query Goal
 # -------------------------------
-
+@lru_cache(maxsize=128)
+@memory.cache
 def question_to_prolog_query(symptoms, ontology, list_of_predicates):
     prompt = f"""
-    Represent a list of symptoms such as a patient complains in prolog form as a list of facts each ending with '.'
-    Use only predicates from specified list {list_of_predicates}
+    Represent a list of symptoms such as a patient complains in prolog form as a list of flat facts each ending with '.'
+    Use only predicates from specified list {list_of_predicates}. 
+    Predicates should not be nested and their arguments should occur ontology and be synonyms to words in symptoms.
 
     ontology that should be satisfied by these facts:
     {ontology}
     
     Symptoms: {symptoms}
+    
+    For example, for query: 'My inflamed joint is toe, my pain is severe, i have a fever and the disease has returned'
+    and ontology: 
+    inflammation(joints(A)) :- joints(A), member(A, [one, few, both, multiple, toe, knee, ankle]).
+    inflammation(pain(S)) :- pain(S), member(S, [painfull, severe, throbbing, crushing, excruciating]).
+    inflammation(property(C)) :- property(C), member(C, [red, warm, tender, swollen, fever]).
+    inflammation(last(L)) :- last(L), member(L, [few_days, return, additional(longer)]).
+    % Disease definition
+    disease(gout) :- inflammation(joints(A)),  inflammation(pain(S)), inflammation(property(C)), inflammation(last(L)).
+    We have query 'joints(toe). pain(severe). property(fever). last(return).
+    
     """
 
     response = client.chat.completions.create(
@@ -111,7 +134,7 @@ def question_to_prolog_query(symptoms, ontology, list_of_predicates):
 # -------------------------------
 # Step 6: Run Query in Prolog
 # -------------------------------
-def run_prolog_query(query):
+def run_prolog_query(query, goal_predicate):
     try:
         # Split input into facts
         facts = [f.strip().rstrip('.') for f in query.split("\n") if f.strip()]
@@ -119,8 +142,7 @@ def run_prolog_query(query):
         for fact in facts:
             prolog.assertz(fact)
 
-        results = list(prolog.query("disease(D)"))
-        # todo: auto extract this goal from left-bottom corner of ontology
+        results = list(prolog.query(goal_predicate))
 
         # Retract facts after query
         for fact in facts:
@@ -279,6 +301,43 @@ def extract_prolog_predicates(text: str) -> List[str]:
 
     return sorted(predicates)
 
+def analyze_ontology(ontology: str):
+    """
+    Parse ontology and return:
+    1) Set of body predicates (excluding the last clause)
+    2) Head of the last clause in the form disease(D)
+    """
+    # split into clauses
+    clauses = [line.strip() for line in ontology.splitlines() if line.strip() and not line.strip().startswith("%")]
+
+    # extract body predicates from all but last clause
+    body_preds = []
+    for clause in clauses[:-1]:
+        if ":-" in clause:
+            body = clause.split(":-")[1]
+            preds = re.findall(r'([a-zA-Z_]\w*)\s*\(', body)
+            body_preds.extend(preds)
+
+    # extract head predicate of last clause
+    last_clause = clauses[-1]
+    try:
+        match = re.match(r'([a-zA-Z_]\w*)\s*\((.*?)\)', last_clause)
+        if match:
+            head_pred = match.groups()[0]
+        else:
+            head_pred = None  # or set a default like "unknown"
+    except Exception as e:
+        end_of_predicate = last_clause.find('(')
+        if end_of_predicate != -1:
+            head_pred = last_clause[:end_of_predicate]
+        else:
+            head_pred = last_clause.strip()  # fallback if no '(' found
+
+
+    list_str = ', '.join(set(body_preds))
+
+    # return two values
+    return list_str, f"{head_pred}(D)"
 
 def count_top_level_commas(s: str) -> int:
     """Count commas not inside any parentheses."""
@@ -377,7 +436,9 @@ Imaging	Bone erosion with overhanging edge	Symmetric joint space narrowing, eros
                 #"I have Cause:Uric acid crystals,
         "Common Joints:ankle, Tophi chalky, Joint Pattern:often_monoarticular")
     # Step 5
-    list_of_predicates = extract_prolog_predicates(prolog_kb)
+    #list_of_predicates = extract_prolog_predicates(prolog_kb)
+
+    list_of_predicates, goal_predicate = analyze_ontology(prolog_kb)
     #get_predicate_signatures()
     #query = question_to_prolog_query(question, text, list_of_predicates)
     query = "disease(D), joint_pattern(D, monoarticular), common_joint(D, ankle), systemic_symptoms_frequency(D, rare_unless_severe), lesion_type(D, tophi), lesion_characteristic(D, chalky_under_skin), lesion_common_site(D, elbows)."
@@ -385,7 +446,7 @@ Imaging	Bone erosion with overhanging edge	Symmetric joint space narrowing, eros
 
     # Step 6
     #run_prolog_query(query)
-    results, eliminated = run_prolog_query_relaxed(query)
+    results, eliminated = run_prolog_query(goal_predicate)
     print(results)
     print(eliminated)
 
