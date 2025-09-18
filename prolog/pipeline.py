@@ -1,4 +1,3 @@
-from mailcap import subst
 
 from pyswip import Prolog
 from openai import OpenAI
@@ -12,9 +11,16 @@ import itertools
 #memory = Memory("./cache", verbose=1)
 memory = Memory("./llm_prolog_cache", verbose=1, compress=1)
 
+# Get directory where THIS script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Build full path to config.ini relative to this script
+config_path = os.path.join(script_dir, 'config.ini')
+
+
 # Load configuration
 config = RawConfigParser()
-config.read('config.ini')
+config.read(config_path) #'config.ini')
 
 # API keys
 
@@ -156,8 +162,21 @@ def run_prolog_query(query, goal_predicate):
             print("❌ No solutions found for the query.")
             return []
     except Exception as e:
-        print(f"❌ Prolog execution error: {e}")
-        return []
+        error_msg = str(e)
+        print(f"❌ Prolog execution error: {error_msg}")
+
+        # --- Detect existence_error and extract missing predicate ---
+        match = re.search(r"existence_error\(procedure,\s*/\((\w+),\s*(\d+)\)\)", error_msg)
+        if match:
+            pred_name = match.group(1)  # e.g., "type"
+            pred_arity = match.group(2)  # e.g., "1"
+            missing_predicate = f"{pred_name}/{pred_arity}"  # e.g., "type/1"
+
+            # Return user-friendly request
+            return [f"⚠️ Extend your list of symptoms with `{missing_predicate}`. "]
+        else:
+            # Generic fallback
+            return []
 
 
 def split_prolog_goals(query: str):

@@ -5,6 +5,8 @@ import subprocess
 import tempfile
 import os
 
+from pyswip import Prolog
+
 from pipeline import text_to_prolog_facts, question_to_prolog_query,  run_prolog_query, add_to_prolog_knowledge_base, analyze_ontology
 
 # Initialize GPT client
@@ -12,7 +14,7 @@ client = OpenAI()
 # --- Load CSV ---
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/autoimmune_diseases_with_complaints.csv")
+    return pd.read_csv("data/autoimmune_diseases_with_complaints.csv",  encoding='cp1252')
 
 df = load_data()
 
@@ -41,9 +43,12 @@ custom = st.text_area("Or describe in your own words:", placeholder="e.g., I hav
 user_query = custom.strip() if custom.strip() else (selected if selected != "--- Type your own below ---" else None)
 
 # --- Lookup row matching selected complaint ---
-rows = df[df['sample_patient_complaint'] == user_query].iloc[0]
-if not rows.empty:
-    existing_ontology = rows.iloc[0]['disease_symptoms']
+# --- Lookup row matching selected complaint ---
+matched_rows = df[df['sample_patient_complaint'] == user_query]
+
+if not matched_rows.empty:
+    row = matched_rows.iloc[0]               # ✅ Safe to access
+    existing_ontology = row['disease_symptoms']  # ✅ Get value from Series
 else:
     existing_ontology = None
 
@@ -74,20 +79,14 @@ if st.button("Run GPT & Prolog pipeline"):
 
             # 1. GPT natural response
             if existing_ontology is None:
-                gpt_response = client.chat.completions.create(
+                ontology_text = client.chat.completions.create(
                     model="gpt-4o",
                     messages=[{"role": "user", "content": "give symptom description for the disease based on patient complaint: "+ user_query}]
                 ).choices[0].message.content
+            else:
+                ontology_text = existing_ontology
 
             # 2. Ontology (textual)
-            ontology_text = """
-            In most cases, only one or a few joints are affected. The big toe, knee, or ankle joints are most often affected.
-            Sometimes many joints become swollen and painful.
-            The pain starts suddenly, often during the night. Pain is often severe, described as throbbing, crushing, or excruciating.
-            The joint appears warm and red. It is most often very tender and swollen (it hurts to put a sheet or blanket over it).
-            There may be a fever.
-            The attack may go away in a few days, but may return from time to time. Additional attacks often last longer.
-            """
 
             #client.chat.completions.create(
             #    model="gpt-4o",
@@ -110,7 +109,7 @@ if st.button("Run GPT & Prolog pipeline"):
             results = run_prolog_query(query_prolog, goal_predicate)
             eliminated = []
             # Save in session
-            st.session_state.gpt_response = gpt_response
+            st.session_state.gpt_response = ontology_text
             st.session_state.ontology_text = ontology_text
             st.session_state.ontology_prolog = ontology_prolog
             st.session_state.query_prolog = query_prolog
@@ -123,7 +122,6 @@ if st.button("Run GPT & Prolog pipeline"):
             )
 
 
-
 # --- Output areas ---
 st.subheader("1. GPT-5 Response")
 st.text_area("GPT-5 Answer:", st.session_state.gpt_response, height=150, disabled=True)
@@ -131,10 +129,16 @@ st.text_area("GPT-5 Answer:", st.session_state.gpt_response, height=150, disable
 st.subheader("2. Ontology (Textual)")
 edited_ontology_text = st.text_area("Ontology (editable):", st.session_state.ontology_text, height=150)
 
+st.subheader("3. Ontology in Prolog")
+st.text_area("Prolog Ontology (editable)", st.session_state.ontology_prolog, height=150)
+
 if st.button("Rerun with Edited Ontology"):
+    prolog = Prolog()
     # regenerate Prolog ontology from edited text
-    ontology_prolog = text_to_prolog_facts(edited_ontology_text)
+    #ontology_prolog = text_to_prolog_facts(edited_ontology_text)
+    ontology_prolog = st.session_state.ontology_prolog
     add_to_prolog_knowledge_base(ontology_prolog)
+    print("ONTOLOGY PROLOG:" + ontology_prolog)
     list_of_predicates, goal_predicate = analyze_ontology(ontology_prolog)
     results = run_prolog_query(st.session_state.query_prolog, goal_predicate)
     eliminated = []
@@ -144,19 +148,20 @@ if st.button("Rerun with Edited Ontology"):
     eliminated_str = [str(r) for r in eliminated]
 
     st.session_state.result = (
-            "✅ Results:\n" + "\n".join(results_str) +
-            "\n\n❌ Eliminated clauses:\n" + "\n".join(eliminated_str)
+            "✅ Results:\n" + "\n".join(results_str)
+            #"\n\n❌ Eliminated clauses:\n" + "\n".join(eliminated_str)
     )
 
 
-st.subheader("3. Ontology in Prolog")
-st.text_area("Prolog Ontology:", st.session_state.ontology_prolog, height=150, disabled=True)
+#st.subheader("3. Ontology in Prolog")
+#st.text_area("Prolog Ontology:", st.session_state.ontology_prolog, height=150, disabled=True)
 
 st.subheader("4. Query in Prolog")
 edited_query_prolog = st.text_area("Prolog Query (editable):", st.session_state.query_prolog, height=100)
 
 if st.button("Rerun with Edited Query"):
-    list_of_predicates, goal_predicate = analyze_ontology(edited_ontology_text)
+    list_of_predicates, goal_predicate = analyze_ontology(st.session_state.ontology_prolog)
+    print("About to run query: "+edited_query_prolog + " | goal ="+ goal_predicate)
     results = run_prolog_query(edited_query_prolog, goal_predicate)
     eliminated = []
     st.session_state.query_prolog = edited_query_prolog
@@ -164,8 +169,8 @@ if st.button("Rerun with Edited Query"):
     eliminated_str = [str(r) for r in eliminated]
 
     st.session_state.result = (
-            "✅ Results:\n" + "\n".join(results_str) +
-            "\n\n❌ Eliminated clauses:\n" + "\n".join(eliminated_str)
+            "✅ Results:\n" + "\n".join(results_str)
+            #"\n\n❌ Eliminated clauses:\n" + "\n".join(eliminated_str)
     )
 
 st.subheader("5. Prolog Query Result")
