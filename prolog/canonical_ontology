@@ -1,24 +1,4 @@
 
-%Symptoms of acute gout:
-
-%In most cases, only one or a few joints are affected. The big toe, knee, or ankle joints are most often affected.
-%Sometimes many joints become swollen and painful.
-%The pain starts suddenly, often during the night. Pain is often severe, described as throbbing, crushing, or excruciating.
-%The joint appears warm and red. It is most often very tender and swollen (it hurts to put a sheet or blanket over it).
-%There may be a fever.
-%The attack may go away in a few days, but may return from time to time. Additional attacks often last longer.
-
-%ontology
-inflammation(joints(A)):- joints(A), member(A, [one, few, both, multiple, toe, knee, ankle]).
-inflammation(pain(S)) :- pain(S), member(S, [painfull, severe, throbbing, crushing, excruciating]).
-inflammation(property(C)):-property(C), member(C, [red, warm, tender, swollen, fever]).
-infammation(last(L)) :- last(L), member(L, [few_days, return, additional(longer)])
-
-%given disease
-disease(gout) :- inflammation(joints(A)), inflammation(pain(S)), inflammation(property(C)), infammation(last(L)).
-
-%patients complaint as a logic program
-joints(toe). pain(painfull). property(red). property(warm), last(few_days).
 
 
 
