@@ -3,7 +3,8 @@ from openai import OpenAI
 import pandas as pd
 import subprocess
 import tempfile
-import os
+import time
+from rule_attenuation_manager import AttenuatedReasoner, format_reasoning_output
 
 from pyswip import Prolog
 
@@ -12,8 +13,9 @@ from pipeline import text_to_prolog_facts, question_to_prolog_query,  run_prolog
 # Initialize GPT client
 client = OpenAI()
 # --- Load CSV ---
-@st.cache_data
+#@st.cache_data
 def load_data():
+    ts = time.time()
     return pd.read_csv("data/autoimmune_diseases_with_complaints.csv",  encoding='cp1252')
 
 df = load_data()
@@ -107,6 +109,8 @@ if st.button("Run GPT & Prolog pipeline"):
 
             # 5. Run Prolog query
             results = run_prolog_query(query_prolog, goal_predicate)
+            reasoner = AttenuatedReasoner(ontology_prolog)
+            atten_result = reasoner.run_w_attenuation(user_query, query_prolog.split(','))
             eliminated = []
             # Save in session
             st.session_state.gpt_response = ontology_text
@@ -118,7 +122,7 @@ if st.button("Run GPT & Prolog pipeline"):
 
             st.session_state.result = (
                     "✅ Results:\n" + "\n".join(results_str) +
-                    "\n\n❌ Eliminated clauses:\n" + "\n".join(eliminated_str)
+                    "\n\n❌ Atten_run_result: "+format_reasoning_output(atten_result)
             )
 
 
@@ -141,6 +145,7 @@ if st.button("Rerun with Edited Ontology"):
     print("ONTOLOGY PROLOG:" + ontology_prolog)
     list_of_predicates, goal_predicate = analyze_ontology(ontology_prolog)
     results = run_prolog_query(st.session_state.query_prolog, goal_predicate)
+
     eliminated = []
     st.session_state.ontology_text = edited_ontology_text
     st.session_state.ontology_prolog = ontology_prolog

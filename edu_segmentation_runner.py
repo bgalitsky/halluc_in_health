@@ -15,5 +15,5 @@ granularity = "conjunction_words"  # or "default"
 conjunctions = ["and", "but", "however"]  # Customize conjunctions if needed
 device = 'cpu'  # Choose your device, e.g., 'cuda:0'
 
-segmented_output = edu_segmenter.run(text, granularity, conjunctions, device)
+segmented_output = edu_segmenter.run_w_attenuation(text, granularity, conjunctions, device)
 print(segmented_output)
