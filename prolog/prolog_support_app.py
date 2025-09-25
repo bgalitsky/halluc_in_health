@@ -20,6 +20,15 @@ def load_data():
 
 df = load_data()
 
+#---------------- Ontology ----------------
+ontology_init = """inflammation(joints(A)) :- joints(A), member(A, [one,few,both,multiple,toe,knee,ankle])
+inflammation(pain(S)) :- pain(S), member(S, [painfull,severe,throbbing,crushing,excruciating])
+inflammation(property(C)) :- property(C), member(C, [red,warm,tender,swollen,fever])
+inflammation(last(L)) :- last(L), member(L, [few_days,return,additional_longer])
+disease(gout) :- inflammation(joints(A)), inflammation(pain(S)), inflammation(property(C)), inflammation(last(L))
+"""
+
+patient_facts_init = ["joints(toe)", "pain(severe)", "property(red)", "last(few_days)"]
 
 st.title("Ontology-Driven QA with GPT-5 + Prolog")
 
@@ -99,7 +108,7 @@ if st.button("Run GPT & Prolog pipeline"):
             #).choices[0].message.content
 
             # 3. Ontology in Prolog
-            ontology_prolog = text_to_prolog_facts(ontology_text)
+            ontology_prolog = ontology_init #text_to_prolog_facts(ontology_text)
             add_to_prolog_knowledge_base(ontology_prolog)
 
             # 4. Prolog query
@@ -110,7 +119,7 @@ if st.button("Run GPT & Prolog pipeline"):
             # 5. Run Prolog query
             results = run_prolog_query(query_prolog, goal_predicate)
             reasoner = AttenuatedReasoner(ontology_prolog)
-            atten_result = reasoner.run_w_attenuation(user_query, query_prolog.split(','))
+            atten_result = reasoner.run_w_attenuation(user_query, patient_facts_init)
             eliminated = []
             # Save in session
             st.session_state.gpt_response = ontology_text
@@ -122,7 +131,7 @@ if st.button("Run GPT & Prolog pipeline"):
 
             st.session_state.result = (
                     "✅ Results:\n" + "\n".join(results_str) +
-                    "\n\n❌ Atten_run_result: "+format_reasoning_output(atten_result)
+                    "\n"+format_reasoning_output(atten_result)
             )
 
 
@@ -180,3 +189,19 @@ if st.button("Rerun with Edited Query"):
 
 st.subheader("5. Prolog Query Result")
 st.text_area("Result:", st.session_state.result, height=150, disabled=True)
+
+
+result_for_success = """{'facts': ['joints(toe)', 'pain(severe)', 'property(red)', 'last(few_days)'], 'goal': 'disease', 
+'original_check': False, 'trace': {'joints': [{'A': 'toe'}], 'pain': [{'S': 'severe'}], 
+'properties': [{'C': 'red'}], 'last': [{'L': 'few_days'}], 'disease': []}, 'results': [{'removed': (), 
+'rule': 'disease :- inflammation(joints(A)), inflammation(pain(S)), inflammation(property(C)), inflammation(last(L))', 'succeeds': True, 'kept_count': 4}, 
+{'removed': ('inflammation(pain(S))',), 'rule': 'disease :- inflammation(joints(A)), inflammation(property(C)), inflammation(last(L))', 'succeeds': True, 'kept_count': 3}, 
+{'removed': ('inflammation(property(C))',), 'rule': 'disease :- inflammation(joints(A)), inflammation(pain(S)), inflammation(last(L))', 'succeeds': True, 'kept_count': 3}, 
+{'removed': ('inflammation(property(C))',), 'rule': 'disease :- inflammation(joints(A)), inflammation(pain(S)), inflammation(last(L))', 'succeeds': True, 'kept_count': 3}, 
+{'removed': ('inflammation(pain(S))', 'inflammation(property(C))'), 'rule': 'disease :- inflammation(joints(A)), inflammation(last(L))', 'succeeds': True, 'kept_count': 2},
+ {'removed': ('inflammation(pain(S))', 'inflammation(property(C))'), 'rule': 'disease :- inflammation(joints(A)), inflammation(last(L))', 'succeeds': True, 'kept_count': 2},
+  {'removed': ('inflammation(property(C))', 'inflammation(property(C))'), 'rule': 'disease :- inflammation(joints(A)), inflammation(pain(S)), inflammation(last(L))', 
+  'succeeds': True, 'kept_count': 3}, 
+  {'removed': ('inflammation(pain(S))', 'inflammation(property(C))', 'inflammation(property(C))'), 'rule': 'disease :- inflammation(joints(A)), inflammation(last(L))', 'succeeds': True, 'kept_count': 2}], 
+  'best': {'removed': (), 'rule': 'disease :- inflammation(joints(A)), inflammation(pain(S)), inflammation(property(C)), inflammation(last(L))', 'succeeds': True, 'kept_count': 4}}
+"""
