@@ -37,7 +37,7 @@ prolog = Prolog()  # Initialize Prolog engine
 # -------------------------------
 @lru_cache(maxsize=128)
 @memory.cache
-def text_to_prolog_facts(text):
+def text_to_prolog_ontology(text):
     prompt = f"""
     Convert the following natural language text into logical Prolog facts and rules.
     Use lowercase predicate names and atoms. Use single noun (subject) with a concrete meanining or linguistic predicate for predicate name.
@@ -99,10 +99,10 @@ def add_to_prolog_knowledge_base(prolog_code):
 # -------------------------------
 @lru_cache(maxsize=128)
 @memory.cache
-def question_to_prolog_query(symptoms, ontology, list_of_predicates):
+def question_to_prolog_query(symptoms, ontology, list_of_preds):
     prompt = f"""
     Represent a list of symptoms such as a patient complains in prolog form as a list of flat facts each ending with '.'
-    Use only predicates from specified list {list_of_predicates}. 
+    Use only predicates from specified list {list_of_preds}. 
     Predicates should not be nested and their arguments should occur ontology and be synonyms to words in symptoms.
 
     ontology that should be satisfied by these facts:

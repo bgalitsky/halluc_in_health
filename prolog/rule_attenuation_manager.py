@@ -101,7 +101,8 @@ class DiseaseReasoner:
 
     def assert_patient_facts(self, facts: list[str]):
         for f in facts:
-            f = f.strip().rstrip()
+            f_ = f.strip().rstrip()
+            f = strip_trailing_period(f_)
             if is_valid_prolog_clause(f):
                 try:
                     self.prolog.assertz(f)
@@ -113,7 +114,9 @@ class DiseaseReasoner:
     def check_disease(self, disease_name: str):
         try:
             query = f"disease({disease_name})"
-            return bool(list(self.prolog.query(query)))
+            qres = self.prolog.query(query)
+            qres.close()
+            return bool(list(qres))
         except Exception as e:
             print(f"⚠️ Prolog query failed: {e}")
             return False
@@ -172,8 +175,9 @@ def dump_kb(prolog, predicate=None):
             query = f"listing({predicate})"
         else:
             query = "listing"
-        results = list(prolog.query(query))
-        return results
+        results = prolog.query(query)
+        results.close()
+        return list(results)
     except Exception as e:
         print(f"⚠️ Could not retrieve clauses: {e}")
         return []
@@ -204,7 +208,9 @@ def attenuate_disease_clause(prolog, disease_name, body_atoms, satellite_atoms):
             #print('\n'.join(dump_kb(prolog)))
 
             try:
-                success = bool(list(prolog.query(f"{disease_name}")))
+                qres = prolog.query(f"{disease_name}")
+                success = bool(list(qres))
+                qres.close()
             except Exception as e:
                 print(f"⚠️ Query failed for {disease_name}: {e}")
         except Exception as e:
@@ -252,11 +258,11 @@ class AttenuatedReasoner:
             # get last non-empty line
             last_line = [ln.strip() for ln in self.ontology_str.splitlines() if ln.strip()][-1]
             head = last_line.split(":-", 1)[0].strip()
-            match = re.match(r"^([a-zA-Z0-9_]+)\s*\(", head)
-            if match:
-                goal =  match.group(1)
-            else:
-                return None
+            #match = re.match(r"^([a-zA-Z0-9_]+)\s*\(", head)
+            #if match:
+            #    goal =  match.group(1)
+            #else:
+            #    return None
         except IndexError:
             print("❌ Ontology string is empty.")
             return None
@@ -280,16 +286,17 @@ class AttenuatedReasoner:
 
         results, best = attenuate_disease_clause(
             reaso_ner.prolog,
-            goal,
+            head,
+            #f"disease({goal})",
             mapping["clause_body"],
             satellites
         )
         reaso_ner.prolog.query("halt")
         return {
             "facts": patient_facts,
-            "goal": goal,
-            "original_check": reaso_ner.check_disease(goal),
-            "trace": reaso_ner.trace_inference(goal),
+            "goal": head, #f"disease({goal})",
+            "original_check": reaso_ner.check_disease(head),
+            "trace": reaso_ner.trace_inference(head),
             "results": results,
             "best": best
         }
@@ -300,12 +307,19 @@ if __name__ == "__main__":
     #test for main function
     p = Prolog()
 
+
+
     complaint_text = ("For the past few days in my knee and ankle pain was throbbing. When I woke up at night due to severe pain, I took a painkiller. "
                       "When I carefully looked at my red joint, it seemed swollen. Once I discovered that I had a fever, I started thinking how to cure it.")
     # 2. Map text → Prolog facts
     patient_facts = ["joints(toe)", "pain(severe)", "property(red)", "last(few_days)"]
 
     reasoner = AttenuatedReasoner(ontology)
+
+
+    reas = DiseaseReasoner(ontology)
+    reas.assert_patient_facts(["joint(wrist)."])
+
     result = reasoner.run_w_attenuation(complaint_text, patient_facts)
     print(result)
 

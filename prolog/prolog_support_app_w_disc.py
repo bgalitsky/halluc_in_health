@@ -59,7 +59,7 @@ df = load_data()
 
 #patient_facts_init = ["joints(toe)", "pain(severe)", "property(red)", "last(few_days)"]
 
-st.title("Ontology-Driven QA with GPT-5 + Prolog")
+st.title("LLM decision verifier with Prolog and discourse")
 
 # Input
 
