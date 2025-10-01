@@ -20,6 +20,29 @@ import os
 from joblib import Memory
 from configparser import RawConfigParser
 from problog.core import ProbLog
+from multiprocessing import Process, Queue
+
+def eval_worker(program: PrologString, queue: Queue):
+    try:
+        result1 = ProbLog.convert(program, SDD).evaluate()
+        queue.put(result1)
+    except Exception as e:
+        queue.put(e)
+
+def evaluate_with_timeout(program: PrologString, timeout: int = 60):
+    q = Queue()
+    p = Process(target=eval_worker, args=(program, q))
+    p.start()
+    p.join(timeout)
+    if p.is_alive():
+        p.terminate()
+        p.join()
+        return {}  # empty result on timeout
+    res = q.get()
+    if isinstance(res, Exception):
+        raise res
+    return res
+
 
 # Cache directory persists between runs
 #memory = Memory("./cache", verbose=1)
@@ -120,7 +143,7 @@ def get_discourse_tree(text: str,
 # -------------------------------
 client = OpenAI()
 
-def discourse_to_problog(discourse_json_ontology: dict, discourse_json_facts: dict) -> str:
+def discourse_to_problog(discourse_json_ontology: dict, discourse_json_facts: dict) -> tuple[str,str]:
     """Ask GPT-4 to produce a ProbLog program given discourse JSON and input_type."""
 
     base_policy = (
@@ -176,6 +199,8 @@ def discourse_to_problog(discourse_json_ontology: dict, discourse_json_facts: di
         f"{json.dumps(discourse_json_ontology, ensure_ascii=False, indent=2)}\n\n"
         "Produce the ProbLog program now."
     )
+
+    print("going to gpt with ontology...")
     rsp = client.chat.completions.create(
         model=MODEL_NAME,
         temperature=1,
@@ -224,7 +249,7 @@ def discourse_to_problog(discourse_json_ontology: dict, discourse_json_facts: di
         "Produce the ProbLog program now."
     )
 
-
+    print("going to gpt with facts...")
     rsp = client.chat.completions.create(
         model=MODEL_NAME,
         temperature=1,
@@ -233,9 +258,14 @@ def discourse_to_problog(discourse_json_ontology: dict, discourse_json_facts: di
     )
     facts_prog = rsp.choices[0].message.content.strip()
 
+    init_progr = """% add a deterministic definition:
+        member(X,[X|_]).
+        member(X,[_|T]) :- member(X,T)."
+        \n"""
+
     return_prog = (ontology_prog + "\n" + facts_prog).replace("prolog```", "")
     return_prog = return_prog.replace("```", "")
-    return return_prog
+    return return_prog, f"query({goal_predicate}"
 
 # -------------------------------
 # Evaluate ProbLog
@@ -271,6 +301,7 @@ if __name__ == "__main__":
                     "the condition is classified as gout.")
 
     # Step 1: discourse tree JSON for each
+    print("going to discourse parser...")
     disc_facts = get_discourse_tree(text_facts)
     disc_clauses = get_discourse_tree(text_clauses)
 
@@ -284,7 +315,8 @@ if __name__ == "__main__":
 
     # Step 4: evaluate
     try:
-        res = evaluate_problog(merged_prog)
+        #res = evaluate_problog(merged_prog)
+        res = evaluate_with_timeout(PrologString(merged_prog))
         print("\n=== Evaluation ===\n")
         for atom, prob in res.items():
             print(f"{str(atom):40s}  {prob:.4f}")
