@@ -34,11 +34,11 @@ from configparser
 ---
 
 ### Running the Demo  
-1. discourse_parser_app has an examle of a discourse tree. It uses GPT 5 for discourse parsing. Discourse_parser_endpoint is FastAPI for the parser which returns the same format as the example in the code
-2. prolog/prolog_run_form_app takes a logic program and executes it.  
-3. prolog/prolog_support_app_w_disc takes a query and runs it againt both LLM and logic. prolog/prolog_support_app does the same and also uses discourse tree for better rule/constraint attenuation
-4. prolog/problog_app converts a user request text to probabilistic logic program instead of regular logic program and executes it
-5. asp/argum_text_asp_app converts a user request text to argumentation program and executes it, relying on answer set programming solverh (clingo)
+1. **discourse_parser_app has** an examle of a discourse tree. It uses GPT 5 for discourse parsing. Discourse_parser_endpoint is FastAPI for the parser which returns the same format as the example in the code
+2. prolog/**prolog_run_form_app** takes a logic program and executes it.  
+3. prolog/**prolog_support_app_w_disc** takes a query and runs it againt both LLM and logic. prolog/prolog_support_app does the same and also uses discourse tree for better rule/constraint attenuation
+4. prolog/**problog_app converts** a user request text to probabilistic logic program instead of regular logic program and executes it
+5. asp/**argum_text_asp_app** converts a user request text to argumentation program and executes it, relying on answer set programming solverh (clingo)
    
 
 ---
