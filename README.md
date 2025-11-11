@@ -78,6 +78,8 @@ it first needs to be compiled:
 
 Get the big jar with libraries and linguistic models at https://1drv.ms/u/c/02a008d38e197356/EVZzGY7TCKAggAKBAgAAAAABTv2SFOib7yn1xabsjI2gNQ?e=2YAOL9
 
+Also get other resources from https://1drv.ms/u/c/02a008d38e197356/ERXtOzPYaU9CnTpD9udKO74BKMxRqc25yW-401y1bQUDQA?e=rDE49Q and unzip into the current directory
+
 Then run '& "...\Java\jre1.8.0_471\bin\java.exe" -cp ".;cb_0.11.jar" discourse_parser
 '
 To run in python, paths needs to be specified:

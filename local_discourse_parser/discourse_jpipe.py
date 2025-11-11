@@ -1,85 +1,53 @@
-# discourse_jpipe.py  (updated)
 import os
 import jpype
 import jpype.imports
-import sys
 
-# --- CONFIG: adjust if needed ---
-JRE8_JVM_DLL = r"C:\Program Files\Java\jre1.8.0_471\bin\server\jvm.dll"  # Java 8 JVM (to avoid JAXB issues)
-CB_JAR = os.path.abspath("../../../../../discourse_parser/cb_0.11.jar")                                   # your fat jar
-EXTRA_CLASSPATH = "."                                                     # where DiscourseParser.class lives
+# --- Adjust paths for your machine ---
+JRE8_JVM = r"C:\Program Files\Java\jre1.8.0_471\bin\server\jvm.dll"  # Java 8 to avoid JAXB issues
+CB_JAR = os.path.abspath("cb_0.11.jar")                               # your fat jar
+EXTRA_CP = os.path.abspath(".")                                       # where DiscourseParser.class lives
 DISABLE_SUTIME = True
-
-def _ensure_jpype_support_jar():
-    """Find org.jpype.jar inside the jpype package and expose it via JPYPE_JAR env var."""
-    import jpype as _jp
-    pkg_dir = os.path.dirname(_jp.__file__)
-    candidate = os.path.join(pkg_dir, "org.jpype.jar")
-    if os.path.isfile(candidate):
-        # Tell JPype exactly where its support jar is.
-        os.environ["JPYPE_JAR"] = candidate
-        return candidate
-    # Some wheels place resources differently; try a few common locations.
-    for rel in ("_pyinstaller/org.jpype.jar", "resources/org.jpype.jar"):
-        cand = os.path.join(pkg_dir, rel)
-        if os.path.isfile(cand):
-            os.environ["JPYPE_JAR"] = cand
-            return cand
-    raise RuntimeError("Cannot locate org.jpype.jar inside jpype package at: " + pkg_dir)
 
 _started = False
 _DiscourseParser = None
 
-def init_jvm(jvm_path: str = None, disable_sutime: bool = DISABLE_SUTIME):
-    """Start a persistent JVM once."""
-    global _started, _DiscouseParser  # typo-safe
+def init_jvm(jvm_path: str = JRE8_JVM, disable_sutime: bool = DISABLE_SUTIME):
+    """Start a persistent JVM once, using JPype's classpath support."""
+    global _started, _DiscourseParser
     if _started:
         return
+    if not os.path.isfile(jvm_path):
+        raise RuntimeError(f"JVM not found: {jvm_path}")
+    if not os.path.isfile(CB_JAR):
+        raise RuntimeError(f"cb_0.11.jar not found at: {CB_JAR}")
 
-    # Ensure JPype can find its own support jar
-    support_jar = _ensure_jpype_support_jar()
-
-    jvm = jvm_path or JRE8_JVM_DLL
-    if not os.path.isfile(jvm):
-        raise RuntimeError(f"JVM not found: {jvm}")
-
-    # Build classpath (Windows uses ';')
-    classpath = ";".join(filter(None, [EXTRA_CLASSPATH, CB_JAR, support_jar]))
-
-    jvm_args = [
+    # Start JVM with explicit classpath list (JPype handles its support jar)
+    jpype.startJVM(
+        jvm_path,
         "-Dfile.encoding=UTF-8",
-        f"-Djava.class.path={classpath}",
-    ]
-    if disable_sutime:
-        jvm_args += [
-            "-Dsutime.binders=0",
-            "-Dner.applyNumericClassifiers=false",
-        ]
-
-    # Start JVM
-    jpype.startJVM(jvm, *jvm_args)
+        classpath=[EXTRA_CP, CB_JAR],
+    )
     _started = True
 
-    # Load Java class
-    _load_discourse_parser()
+    # Disable SUTime/JollyDay if requested (set after JVM start)
+    if disable_sutime:
+        from jpype import JClass
+        System = JClass("java.lang.System")
+        System.setProperty("sutime.binders", "0")
+        System.setProperty("ner.applyNumericClassifiers", "false")
 
-def _load_discourse_parser():
-    """Cache the Java DiscourseParser class reference."""
-    global _DiscourseParser  # keep global name unique
+    # Load Java class (no package per your setup)
     from jpype import JClass
-    # DiscourseParser has no package per your setup
-    _globals = globals()
-    _globals["_DiscourseParser"] = JClass("DiscourseParser")
+    _DiscourseParser = JClass("DiscourseParser")
 
 def parse_to_rst(text: str, disable_sutime: bool = DISABLE_SUTIME) -> str:
-    """Parse text and return discourse tree as string."""
     if not isinstance(text, str):
         text = str(text)
     if not _started:
         init_jvm(disable_sutime=disable_sutime)
     parser = _DiscourseParser(bool(disable_sutime))
-    res = parser.parseToRST(text)
-    return (res or "").strip()
+    s = parser.parseToRST(text)
+    return (s or "").trim()
 
 def shutdown_jvm():
     global _started, _DiscourseParser
@@ -91,3 +59,6 @@ def shutdown_jvm():
 if __name__ == "__main__":
     init_jvm()
     print(parse_to_rst("This is a test. However, the result may vary."))
+    print(parse_to_rst("A day after the US Senate passed a spending bill to end the longest-ever government shutdown, the budget fight now moves to the House of Representatives. "))
+    print(parse_to_rst("The lower chamber of Congress is expected to vote this week on the funding measure. Unlike in the Senate, if House Republicans stay united, they don't need any Democrats to pass the budget. But the margin for error is razor thin." ))
+    shutdown_jvm()
