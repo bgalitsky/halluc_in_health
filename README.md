@@ -67,3 +67,29 @@ from configparser
 - Automatic discourse parsing, claim extraction and mapping are **error-prone** – human-in-the-loop remains recommended.  
 - Integration with non-English languages, multi-modality (images, labs) and real-time deployment is **ongoing work**.  
 - Future work: stronger abductive-logic modules, richer probabilistic modelling, fine-grained argumentation with multi-agent chains.
+
+## 7. Running local discourse parser
+
+Look at /local_discourse_parser
+
+To run in Java, run DiscourseParser.java including the big jar library
+it first needs to be compiled:
+'javac --release 8 -cp cb_0.11.jar discourse_parser.java'  
+
+Get the big jar with libraries and linguistic models at https://1drv.ms/u/c/02a008d38e197356/EVZzGY7TCKAggAKBAgAAAAABTv2SFOib7yn1xabsjI2gNQ?e=2YAOL9
+
+Then run '& "...\Java\jre1.8.0_471\bin\java.exe" -cp ".;cb_0.11.jar" discourse_parser
+'
+To run in python, paths needs to be specified:
+
+JAVA_PATH = r"...\Java\jre1.8.0_471\bin\java.exe"
+
+JAR_PATH = os.path.abspath("cb_0.11.jar")
+
+CLASS_PATH = f".;{JAR_PATH}"  # Windows classpath separator is ';'
+
+CLASS_NAME = "DiscourseParser"
+
+Run 'python discourse_wrapper.py'
+
+To keep java in memory, run 'python discourse_jpipe.py'
