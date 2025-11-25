@@ -110,6 +110,51 @@ class AlpDiagnosis:
         finally:
             q.close()
 
+    def conditional_entailment_prob(dx: AlpDiagnosis, edu, explanation: list[str], source_text: str) -> float:
+        """
+        P(EDU | H), approximated by NLI/entailment or logic.
+        Prolog side: p_edu_given_h(ClaimAtom, HList, P).
+        edu.claim_atom is used as the 'hypothesis' to be entailed under H.
+        """
+        if not explanation:
+            return 1e-3
+
+        h_list = "[" + ", ".join(explanation) + "]"
+        query = f"p_edu_given_h({edu.claim_atom}, {h_list}, P)"
+
+        results = list(dx.prolog.query(query, maxresult=1))
+        if not results:
+            return 1e-3
+        return float(results[0]["P"])
+
+    # ---------- PLP probability: plp_prob and plp_prob_single ----------
+
+    def plp_prob(dx: AlpDiagnosis, explanation: list[str]) -> float:
+        """
+        Probabilistic logic program score P(H).
+        Prolog side: plp_prob(HList, P).
+        """
+        if not explanation:
+            return 1.0
+
+        h_list = "[" + ", ".join(explanation) + "]"
+        query = f"plp_prob({h_list}, P)"
+
+        results = list(dx.prolog.query(query, maxresult=1))
+        if not results:
+            return 1e-6
+        return float(results[0]["P"])
+
+    def plp_prob_single(dx: AlpDiagnosis, h: str) -> float:
+        """
+        Probability of a single hypothesis literal h.
+        Prolog side: plp_prob_single(H, P).
+        """
+        query = f"plp_prob_single({h}, P)"
+        results = list(dx.prolog.query(query, maxresult=1))
+        if not results:
+            return 1e-6
+        return float(results[0]["P"])
 
 if __name__ == "__main__":
     dx = AlpDiagnosis()

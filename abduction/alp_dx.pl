@@ -122,3 +122,63 @@ init_demo_ics :-
 load_demo :-
     clear_obs,
     init_demo_ics.
+
+% ---------- LP consistency ----------
+
+% lp_consistent(+HList)
+% True if HList is consistent with the KB (no contradictions).
+lp_consistent(HList) :-
+    % Example: just assume all are consistent for now
+    % Replace with your real LP checks (e.g., no conflicts, no negation).
+    \+ inconsistent(HList).
+
+% You could define `inconsistent/1` in terms of your rules if needed.
+
+% ---------- PLP probability ----------
+
+% plp_prob(+HList, -P)
+% Returns joint probability P(HList).
+plp_prob([], 1.0).
+plp_prob([H|T], P) :-
+    plp_prob_single(H, PH),
+    plp_prob(T, PT),
+    P is PH * PT.
+
+% plp_prob_single(+H, -P)
+% Define probabilities for each hypothesis literal (toy example).
+plp_prob_single(disease(gout), 0.3).
+plp_prob_single(disease(rheumatoid_arthritis), 0.2).
+plp_prob_single(rare_genetic_factor(_), 0.01).
+plp_prob_single(_, 0.1).
+
+% ---------- Argumentation defeat ----------
+
+% defeat_strength(+Claim, -D)
+% D in [0,1], 0 = undefeated, 1 = fully defeated.
+% Here we just stub it; integrate your argumentation engine instead.
+defeat_strength(Claim, 0.0) :-
+    % if no attacking argument found:
+    \+ attacked(Claim), !.
+defeat_strength(Claim, 0.7) :-
+    attacked(Claim), !.
+
+% attacked/1 can be defined by your argumentation framework.
+
+% ---------- Abduction cost ----------
+
+% abduction_cost(+HList, -Cost)
+% Basic MDL-like cost: number of hypotheses or more complex formula.
+abduction_cost(HList, Cost) :-
+    length(HList, N),
+    Cost is N.
+
+% ---------- Conditional probability P(EDU|H) ----------
+
+% p_edu_given_h(+ClaimAtom, +HList, -P)
+% Probability that ClaimAtom holds given HList.
+p_edu_given_h(Claim, HList, 0.9) :-
+    % Example: if Claim is entailed by HList, give high probability
+    entails(HList, Claim), !.
+p_edu_given_h(_, _, 0.1).
+
+% entails/2 must be defined using your ALP / LP rules.
