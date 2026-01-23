@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" modified="2026-01-23T00:00:00.000Z" agent="GPT" version="24.7.7" type="device">
+  <diagram id="hallucination-to-invention" name="Hallucination → Invention Pipeline">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Nodes -->
+        <mxCell id="n1" value="Engineering question&#10;(goal + context)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="240" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n2" value="LLM response&#10;Hallucinated mechanism&#10;(plausible-sounding, ungrounded)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n3" value="Human reframing&#10;Treat as hypothesis, not fact&#10;(abductive proposal)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="780" y="80" width="260" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n4" value="Symbolic constraint checking (CSP / rules)&#10;- Energy conservation&#10;- Kinetics limits&#10;- Heat/mass transport bounds&#10;- Safety/operability constraints" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="420" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n5" value="Counter-abduction / alternatives&#10;Generate competing explanations/designs&#10;Rank by feasibility + utility" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="560" y="230" width="320" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n6" value="Filter outcome&#10;Reject non-physical parts&#10;Keep promising fragments" style="shape=hexagon;perimeter=hexagonPerimeter;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="920" y="245" width="200" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n7" value="Refined engineering concept&#10;Example: fixed-bed reactor with&#10;axially graded catalyst activity +&#10;embedded high-conductivity inserts&#10;(passive hotspot suppression)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="520" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n8" value="Validation loop&#10;Simulation / formal verification / experiments&#10;Iterate constraints &amp; design" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="660" y="440" width="320" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="n9" value="Outcome&#10;Invention candidate&#10;(prototype / patent claim / deployable design)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;strokeWidth=2;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="80" y="630" width="420" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n1" target="n2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n2" target="n3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n3" target="n4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n4" target="n5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n5" target="n6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e6" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n6" target="n7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e7" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n7" target="n8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e8" style="endArrow=block;endFill=1;strokeWidth=2;" edge="1" parent="1" source="n8" target="n9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Feedback loop -->
+        <mxCell id="e9" value="iterate" style="endArrow=block;endFill=1;strokeWidth=2;dashed=1;html=1;fontSize=15;" edge="1" parent="1" source="n8" target="n4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

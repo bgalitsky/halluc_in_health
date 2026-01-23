@@ -1,0 +1,219 @@
+{
+  "dataset_name": "Hall2Invent-Seed",
+  "version": "0.1",
+  "description": "Seed research questions designed to induce LLM hallucinations that can be transformed into breakthrough ideas via abductive reasoning.",
+  "cases": [
+    {
+      "id": "H2I-CH-01",
+      "domain": "chemical_engineering",
+      "trigger_type": ["mechanism_fabrication", "hidden_constraint"],
+      "research_question": "Can a fixed-bed exothermic reactor passively suppress hot spots without external cooling or feedback control? Explain the mechanism and propose a design.",
+      "intent": "passive_temperature_regulation"
+    },
+    {
+      "id": "H2I-CH-02",
+      "domain": "chemical_engineering",
+      "trigger_type": ["overgeneralization", "stability_assumption"],
+      "research_question": "Is it possible to design an autothermal reactor that remains stable across feed composition swings without sensors? Describe how stability emerges.",
+      "intent": "autothermal_stability"
+    },
+    {
+      "id": "H2I-CH-03",
+      "domain": "chemical_engineering",
+      "trigger_type": ["mechanism_fabrication"],
+      "research_question": "Can a distillation column be designed to selectively remove heat only from the most exothermic trays? Explain how that would work.",
+      "intent": "selective_heat_removal"
+    },
+    {
+      "id": "H2I-CH-04",
+      "domain": "chemical_engineering",
+      "trigger_type": ["anthropomorphic_mechanism"],
+      "research_question": "Can a catalyst bed be engineered with memory so conversion remains constant under rapid flow oscillations? Provide the physical basis.",
+      "intent": "load_following_catalysis"
+    },
+    {
+      "id": "H2I-CH-05",
+      "domain": "chemical_engineering",
+      "trigger_type": ["conservation_violation"],
+      "research_question": "Can a recycle loop increase overall yield above the equilibrium limit without changing temperature or pressure? Explain why.",
+      "intent": "equilibrium_circumvention"
+    },
+    {
+      "id": "H2I-CH-06",
+      "domain": "chemical_engineering",
+      "trigger_type": ["geometry_fallacy"],
+      "research_question": "Can reactor geometry alone guarantee no runaway for strongly exothermic kinetics? Provide a general proof and a design rule.",
+      "intent": "runaway_prevention"
+    },
+    {
+      "id": "H2I-CH-07",
+      "domain": "chemical_engineering",
+      "trigger_type": ["thermodynamic_violation"],
+      "research_question": "Can a compact heat exchanger achieve a higher outlet temperature than the hot-side inlet through internal heat routing? Explain.",
+      "intent": "heat_exchange_limits"
+    },
+    {
+      "id": "H2I-CH-08",
+      "domain": "chemical_engineering",
+      "trigger_type": ["vague_mechanism"],
+      "research_question": "Can a porous insert act as a passive thermal thermostat inside a reactor? Specify the microstructure that makes it work.",
+      "intent": "thermal_self_regulation"
+    },
+    {
+      "id": "H2I-CH-09",
+      "domain": "chemical_engineering",
+      "trigger_type": ["perfect_selectivity_claim"],
+      "research_question": "Can a membrane reactor be made perfectly selective for hydrogen while maintaining high flux at industrial pressures? Explain the mechanism.",
+      "intent": "membrane_selectivity"
+    },
+    {
+      "id": "H2I-CH-10",
+      "domain": "chemical_engineering",
+      "trigger_type": ["universal_guarantee"],
+      "research_question": "Can engineered spatial heterogeneity in catalyst activity guarantee bounded temperature variance for any feed disturbance? Outline the design.",
+      "intent": "robust_reactor_design"
+    },
+
+    {
+      "id": "H2I-SYS-11",
+      "domain": "systems_architecture",
+      "trigger_type": ["coordination_fallacy"],
+      "research_question": "Can a distributed system guarantee exactly-once execution without coordination and without duplicates, even under partitions? Explain.",
+      "intent": "distributed_execution"
+    },
+    {
+      "id": "H2I-SYS-12",
+      "domain": "systems_architecture",
+      "trigger_type": ["consensus_fabrication"],
+      "research_question": "Is there a consensus protocol that does not require quorums or majority assumptions but still guarantees safety? Provide reasoning.",
+      "intent": "consensus_protocols"
+    },
+    {
+      "id": "H2I-SYS-13",
+      "domain": "systems_architecture",
+      "trigger_type": ["zero_overhead_claim"],
+      "research_question": "Can a control architecture be fully fault tolerant with zero redundancy overhead? Describe how.",
+      "intent": "fault_tolerance"
+    },
+    {
+      "id": "H2I-SYS-14",
+      "domain": "systems_architecture",
+      "trigger_type": ["optimality_under_uncertainty"],
+      "research_question": "Can a scheduler guarantee optimality for unknown job durations without preemption? Provide the algorithm.",
+      "intent": "scheduling_under_uncertainty"
+    },
+    {
+      "id": "H2I-SYS-15",
+      "domain": "systems_architecture",
+      "trigger_type": ["causality_violation"],
+      "research_question": "Can nodes synchronize time precisely without exchanging timestamps, only by observing traffic? Explain the method.",
+      "intent": "time_synchronization"
+    },
+    {
+      "id": "H2I-SYS-16",
+      "domain": "systems_architecture",
+      "trigger_type": ["cryptography_elimination"],
+      "research_question": "Can a Byzantine fault tolerant protocol work without cryptography or signatures? Provide the mechanism.",
+      "intent": "byzantine_fault_tolerance"
+    },
+    {
+      "id": "H2I-SYS-17",
+      "domain": "systems_architecture",
+      "trigger_type": ["deadlock_paradox"],
+      "research_question": "Can resource allocation be deadlock-free while allowing arbitrary concurrent requests without blocking or waiting? Explain.",
+      "intent": "resource_allocation"
+    },
+    {
+      "id": "H2I-SYS-18",
+      "domain": "systems_architecture",
+      "trigger_type": ["information_loss"],
+      "research_question": "Can deterministic replay be achieved for distributed transactions without logging inputs? Explain how.",
+      "intent": "deterministic_replay"
+    },
+    {
+      "id": "H2I-SYS-19",
+      "domain": "systems_architecture",
+      "trigger_type": ["model_free_guarantee"],
+      "research_question": "Can an adaptive controller guarantee stability for a plant with unknown order and unknown delays without identification? Provide a proof sketch.",
+      "intent": "adaptive_control"
+    },
+    {
+      "id": "H2I-SYS-20",
+      "domain": "systems_architecture",
+      "trigger_type": ["perfect_detection_claim"],
+      "research_question": "Can an anomaly detector achieve zero false positives and zero false negatives in a nonstationary system? Explain.",
+      "intent": "anomaly_detection"
+    },
+
+    {
+      "id": "H2I-PAT-21",
+      "domain": "conceptual_invention",
+      "trigger_type": ["fabricated_physics"],
+      "research_question": "Can a membrane filter molecules by frequency resonance rather than size or charge? Explain the physics and propose a device.",
+      "intent": "molecular_filtration"
+    },
+    {
+      "id": "H2I-PAT-22",
+      "domain": "conceptual_invention",
+      "trigger_type": ["infinite_lifetime_claim"],
+      "research_question": "Can a battery electrode self-repair indefinitely with no capacity fade? Provide the mechanism.",
+      "intent": "energy_storage"
+    },
+    {
+      "id": "H2I-PAT-23",
+      "domain": "conceptual_invention",
+      "trigger_type": ["universal_material_claim"],
+      "research_question": "Can a coating repel oil, water, and solvents indefinitely under abrasion? Explain how.",
+      "intent": "surface_engineering"
+    },
+    {
+      "id": "H2I-PAT-24",
+      "domain": "conceptual_invention",
+      "trigger_type": ["second_law_violation"],
+      "research_question": "Can a passive device cool an object below ambient temperature without a temperature gradient to the environment? Explain the mechanism.",
+      "intent": "passive_cooling"
+    },
+    {
+      "id": "H2I-PAT-25",
+      "domain": "conceptual_invention",
+      "trigger_type": ["friction_elimination"],
+      "research_question": "Can a mechanical joint operate with near-zero friction without lubrication and without wear? Explain the design.",
+      "intent": "mechanical_design"
+    },
+    {
+      "id": "H2I-PAT-26",
+      "domain": "conceptual_invention",
+      "trigger_type": ["energy_creation"],
+      "research_question": "Can a weak signal be amplified using only ambient noise without adding energy? Explain.",
+      "intent": "signal_processing"
+    },
+    {
+      "id": "H2I-PAT-27",
+      "domain": "conceptual_invention",
+      "trigger_type": ["overclaim_material"],
+      "research_question": "Can an interconnect behave like a superconductor at room temperature via structural design alone? Explain.",
+      "intent": "electrical_interconnects"
+    },
+    {
+      "id": "H2I-PAT-28",
+      "domain": "conceptual_invention",
+      "trigger_type": ["privacy_utility_paradox"],
+      "research_question": "Can a system provide perfect privacy and perfect utility simultaneously for arbitrary queries? Explain the method.",
+      "intent": "privacy_preserving_systems"
+    },
+    {
+      "id": "H2I-PAT-29",
+      "domain": "conceptual_invention",
+      "trigger_type": ["universal_solution_claim"],
+      "research_question": "Can a single passive treatment prevent corrosion for all metals in all environments? Explain the science.",
+      "intent": "corrosion_prevention"
+    },
+    {
+      "id": "H2I-PAT-30",
+      "domain": "conceptual_invention",
+      "trigger_type": ["imaging_physics_violation"],
+      "research_question": "Can CT-like medical imaging resolution be achieved without ionizing radiation using only passive ambient fields? Explain how.",
+      "intent": "medical_imaging"
+    }
+  ]
+}
