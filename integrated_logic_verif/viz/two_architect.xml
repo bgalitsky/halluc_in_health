@@ -1,0 +1,118 @@
+<mxfile host="app.diagrams.net" modified="2026-02-27T00:00:00.000Z" agent="ChatGPT" version="22.1.0" type="device">
+  <diagram id="cmp-pipelines" name="LLM Verification Pipelines">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="t1" value="Comparison of Two Pipelines for Logical Verification of LLM Outputs" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="20" width="1360" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Column headers -->
+        <mxCell id="h1" value="(1) Formalism-First Pipeline (Classifier → Specialized Solver)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fillColor=#f5f5f5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="700" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="h2" value="(2) LLP Pipeline (Universal Labeled Logic Program; No Classification Needed)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fillColor=#f5f5f5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="820" y="80" width="700" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Left pipeline nodes -->
+        <mxCell id="l1" value="User problem / query&#10;(natural language)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="540" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l2" value="LLM: classify required logical formalism&#10;(temporal / modal / probabilistic / argumentation / spatial / etc.)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#fff7e6;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="160" y="250" width="540" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l3" value="LLM: build ontology + query representation&#10;for the chosen formalism&#10;(schemas, predicates, constraints, weights)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#fff7e6;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="160" y="360" width="540" height="95" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l4" value="Initialize specialized solver&#10;(e.g., Temporal solver / Model checker / ProbLog / DeLP / CSP)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#e8f5ff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="160" y="475" width="540" height="85" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l5" value="Run verification + produce report&#10;(supported / defeated / uncertain + explanation trace)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="160" y="580" width="540" height="85" as="geometry"/>
+        </mxCell>
+
+        <!-- Left pipeline risk note -->
+        <mxCell id="l_note" value="Risk / limitation:&#10;• Misclassification of needed formalism&#10;• Some solvers / reasoning methods may be missing&#10;• Integration overhead across heterogeneous tools" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fontSize=13;fillColor=#ffecec;strokeColor=#cc6666;" vertex="1" parent="1">
+          <mxGeometry x="160" y="690" width="540" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Right pipeline nodes -->
+        <mxCell id="r1" value="User problem / query&#10;(natural language)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="900" y="160" width="540" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r2" value="LLM: extract claims + assign labels&#10;(time, modality, provenance, argument role, probability, discourse weights)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#eaffea;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="900" y="250" width="540" height="95" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r3" value="LLM: build ontology directly in LLP format&#10;(labeled facts + labeled rules; optional discourse-aware attenuation)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#eaffea;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="900" y="365" width="540" height="95" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r4" value="Run LLP engine with logic profiles&#10;(temporal, modal, probabilistic, argumentation, abductive, hybrid)&#10;— no prior classification required" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#e8f5ff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="900" y="480" width="540" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="r5" value="Meta-aggregate verdicts + produce report&#10;(supported / defeated / uncertain + unified explanation)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="900" y="605" width="540" height="85" as="geometry"/>
+        </mxCell>
+
+        <!-- Right pipeline advantage note -->
+        <mxCell id="r_note" value="Advantage:&#10;• Universal substrate covers many reasoning styles&#10;• Less brittleness (no “pick-the-right-logic” step)&#10;• Fewer missing-method failures (most are already implemented in LLP)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fontSize=13;fillColor=#eef9ff;strokeColor=#5b8db8;" vertex="1" parent="1">
+          <mxGeometry x="900" y="710" width="540" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows left -->
+        <mxCell id="le1" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="l1" target="l2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="le2" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="l2" target="l3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="le3" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="l3" target="l4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="le4" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="l4" target="l5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows right -->
+        <mxCell id="re1" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="r1" target="r2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="re2" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="r2" target="r3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="re3" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="r3" target="r4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="re4" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="r4" target="r5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Comparison callout in the middle -->
+        <mxCell id="mid" value="Key difference:&#10;(1) Requires early logic selection + tool availability&#10;(2) Uses one LLP substrate; “profiles” activate needed reasoning" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fillColor=#f0f0ff;strokeColor=#6666aa;" vertex="1" parent="1">
+          <mxGeometry x="620" y="300" width="320" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Dashed connectors to mid callout -->
+        <mxCell id="mid_l" style="dashed=1;endArrow=none;strokeWidth=2;strokeColor=#6666aa;" edge="1" parent="1" source="mid" target="l2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="mid_r" style="dashed=1;endArrow=none;strokeWidth=2;strokeColor=#6666aa;" edge="1" parent="1" source="mid" target="r4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

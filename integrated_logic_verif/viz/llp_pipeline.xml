@@ -1,0 +1,143 @@
+<mxfile host="app.diagrams.net" modified="2026-02-27T00:00:00.000Z" agent="ChatGPT" version="22.1.0" type="device">
+  <diagram id="llp-pipeline" name="LLP Verification Pipeline">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Header -->
+        <mxCell id="title" value="LLP-based Logical Verification Pipeline (No Formalism Classification Needed)" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="20" width="1440" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Left column: user + LLM answer -->
+        <mxCell id="u1" value="User request&#10;(problem / question)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="90" y="90" width="260" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="llm1" value="LLM processes request&#10;and produces answer&#10;(e.g., diagnosis / decision)" style="shape=cloud;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="70" y="175" width="300" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ans" value="LLM answer&#10;(claim to verify)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="90" y="305" width="260" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Central: LLP construction -->
+        <mxCell id="c1" value="LLM forms textual representation&#10;of domain knowledge + reasoning&#10;as LLP-ready content&#10;(facts, rules, exceptions, modalities)" style="shape=cloud;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#eaffea;strokeColor=#4a7c4a;" vertex="1" parent="1">
+          <mxGeometry x="430" y="130" width="360" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="txtOnt" value="Textual ontology&#10;(intermediate)" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="100" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="disc" value="Discourse parser" style="shape=3d;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fillColor=#f0f0f0;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="990" y="190" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rstNote" value="Nucleus → strong / must-like&#10;Satellite → weaker / should-like&#10;(used to set label weights)" style="shape=document;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=12;fillColor=#fff7e6;strokeColor=#b68b2a;" vertex="1" parent="1">
+          <mxGeometry x="980" y="290" width="280" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c2" value="LLM converts textual ontology into&#10;LLP representation: labeled facts + labeled rules&#10;Labels capture: time, modality, provenance, argument-role, probability" style="shape=cloud;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#eaffea;strokeColor=#4a7c4a;" vertex="1" parent="1">
+          <mxGeometry x="430" y="270" width="360" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c3" value="LLM builds LLP query representation&#10;(the user request as labeled facts / goals)&#10;so it can be supported or defeated by LLP rules" style="shape=cloud;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#eaffea;strokeColor=#4a7c4a;" vertex="1" parent="1">
+          <mxGeometry x="430" y="430" width="360" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c4" value="Discourse-aware weighting in LLP&#10;Adjust label strengths for central vs contextual statements&#10;(importance + confidence + defeat priority)" style="shape=cloud;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#eaffea;strokeColor=#4a7c4a;" vertex="1" parent="1">
+          <mxGeometry x="430" y="560" width="360" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- LLP store -->
+        <mxCell id="llpOnt" value="LLP ontology&#10;(labeled facts + labeled rules)" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="410" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- LLP engine -->
+        <mxCell id="engine" value="LLP engine (universal substrate)&#10;Run with logic profiles as needed:&#10;temporal / modal / probabilistic / argumentation / abductive / hybrid" style="shape=3d;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#e8f5ff;strokeColor=#3f6fa1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="510" width="320" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="pipeline" value="Verification pipeline&#10;• compute support/attack relations&#10;• run profile-specific checks (time/world/prob)&#10;• derive: supported / defeated / uncertain&#10;• produce unified explanation trace (labels)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fontSize=12;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="990" y="640" width="300" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Compare + verdict -->
+        <mxCell id="cmp" value="LLM compares its answer&#10;with LLP-derived verdict" style="shape=cloud;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fillColor=#ffffff;strokeColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="90" y="420" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="verdict" value="If LLP does NOT defeat the claim → LLM answer confirmed&#10;If LLP defeats / contradicts the claim → LLM answer unconfirmed" style="shape=hexagon;perimeter=hexagonPerimeter;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fillColor=#ffecec;strokeColor=#cc6666;" vertex="1" parent="1">
+          <mxGeometry x="180" y="700" width="1150" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Advantage callout -->
+        <mxCell id="adv" value="Key advantage of LLP pipeline:&#10;No “choose-the-right-logic” step. One representation supports many reasoning styles.&#10;Reduces failures from missing solvers and brittle classification." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fontSize=12;fillColor=#eef9ff;strokeColor=#5b8db8;" vertex="1" parent="1">
+          <mxGeometry x="90" y="520" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="u1" target="llm1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="llm1" target="ans">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4a7c4a;" edge="1" parent="1" source="llm1" target="c1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4a7c4a;" edge="1" parent="1" source="c1" target="c2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4a7c4a;" edge="1" parent="1" source="c2" target="c3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#4a7c4a;" edge="1" parent="1" source="c3" target="c4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e7" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c1" target="txtOnt">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c1" target="disc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#b68b2a;" edge="1" parent="1" source="disc" target="rstNote">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e10" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c2" target="llpOnt">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#3f6fa1;" edge="1" parent="1" source="llpOnt" target="engine">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#3f6fa1;" edge="1" parent="1" source="engine" target="pipeline">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e13" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#444444;" edge="1" parent="1" source="ans" target="cmp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e14" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#3f6fa1;" edge="1" parent="1" source="pipeline" target="cmp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e15" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#cc6666;" edge="1" parent="1" source="cmp" target="verdict">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Dashed link: discourse weighting affects LLP conversion -->
+        <mxCell id="e16" style="dashed=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#b68b2a;" edge="1" parent="1" source="rstNote" target="c4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
