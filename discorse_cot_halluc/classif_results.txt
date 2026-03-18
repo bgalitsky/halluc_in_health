@@ -1,0 +1,138 @@
+=== Accuracy ===
+1.0
+
+=== Confusion Matrix ===
+[[104   0]
+ [  0  96]]
+
+=== Classification Report ===
+                   precision    recall  f1-score   support
+
+not_hallucination       1.00      1.00      1.00       104
+    hallucination       1.00      1.00      1.00        96
+
+         accuracy                           1.00       200
+        macro avg       1.00      1.00      1.00       200
+     weighted avg       1.00      1.00      1.00       200
+
+
+=== Feature Importances ===
+                         feature  importance
+         num_grounding_relations         1.0
+                    has_downplay         0.0
+                   has_dismissal         0.0
+                   has_overclaim         0.0
+                      has_ignore         0.0
+              has_generalization         0.0
+                    has_contrast         0.0
+                  has_background         0.0
+                 has_elaboration         0.0
+                     has_support         0.0
+                    num_segments         0.0
+                     num_nucleus         0.0
+            has_reinterpretation         0.0
+                   num_satellite         0.0
+                  num_conclusion         0.0
+       num_dismissive_satellites         0.0
+   low_specificity_nucleus_count         0.0
+  high_specificity_nucleus_count         0.0
+ low_specificity_satellite_count         0.0
+high_specificity_satellite_count         0.0
+             root_mentions_favor         0.0
+     root_favors_low_specificity         0.0
+         contradiction_preserved         0.0
+        conclusion_overconfident         0.0
+           red_flag_in_satellite         0.0
+                red_flag_ignored         0.0
+      nucleus_specificity_margin         0.0
+    satellite_specificity_margin         0.0
+   heuristic_hallucination_score         0.0
+
+=== Learned Decision Tree ===
+|--- num_grounding_relations <= 0.50
+|   |--- class: 1
+|--- num_grounding_relations >  0.50
+|   |--- class: 0
+
+
+=== Example: valid-like discourse tree ===
+{
+  "prediction_label": "not_hallucination",
+  "prediction_numeric": 0,
+  "probabilities": {
+    "not_hallucination": 1.0,
+    "hallucination": 0.0
+  },
+  "features": {
+    "has_ignore": 0,
+    "has_downplay": 0,
+    "has_dismissal": 0,
+    "has_overclaim": 0,
+    "has_reinterpretation": 0,
+    "has_generalization": 0,
+    "has_contrast": 1,
+    "has_background": 0,
+    "has_elaboration": 1,
+    "has_support": 0,
+    "num_segments": 4,
+    "num_nucleus": 2,
+    "num_satellite": 1,
+    "num_conclusion": 1,
+    "num_dismissive_satellites": 0,
+    "num_grounding_relations": 2,
+    "low_specificity_nucleus_count": 0,
+    "high_specificity_nucleus_count": 5,
+    "low_specificity_satellite_count": 1,
+    "high_specificity_satellite_count": 0,
+    "root_mentions_favor": 1,
+    "root_favors_low_specificity": 0,
+    "contradiction_preserved": 1,
+    "conclusion_overconfident": 0,
+    "red_flag_in_satellite": 0,
+    "red_flag_ignored": 0,
+    "nucleus_specificity_margin": 5,
+    "satellite_specificity_margin": -1,
+    "heuristic_hallucination_score": -3
+  }
+}
+
+=== Example: hallucination-like discourse tree ===
+{
+  "prediction_label": "hallucination",
+  "prediction_numeric": 1,
+  "probabilities": {
+    "not_hallucination": 0.0,
+    "hallucination": 1.0
+  },
+  "features": {
+    "has_ignore": 1,
+    "has_downplay": 1,
+    "has_dismissal": 0,
+    "has_overclaim": 0,
+    "has_reinterpretation": 0,
+    "has_generalization": 0,
+    "has_contrast": 0,
+    "has_background": 0,
+    "has_elaboration": 0,
+    "has_support": 0,
+    "num_segments": 4,
+    "num_nucleus": 1,
+    "num_satellite": 2,
+    "num_conclusion": 1,
+    "num_dismissive_satellites": 2,
+    "num_grounding_relations": 0,
+    "low_specificity_nucleus_count": 1,
+    "high_specificity_nucleus_count": 0,
+    "low_specificity_satellite_count": 1,
+    "high_specificity_satellite_count": 5,
+    "root_mentions_favor": 1,
+    "root_favors_low_specificity": 1,
+    "contradiction_preserved": 0,
+    "conclusion_overconfident": 0,
+    "red_flag_in_satellite": 1,
+    "red_flag_ignored": 1,
+    "nucleus_specificity_margin": -1,
+    "satellite_specificity_margin": 4,
+    "heuristic_hallucination_score": 14
+  }
+}
