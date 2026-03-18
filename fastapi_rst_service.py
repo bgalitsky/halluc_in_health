@@ -1,11 +1,4 @@
-
-
-from discourse_parser_app import analyze_rst1
-
-#nohup python3 fastapi_rst_service.py > fastapi.log 2>&1 &
-#nohup python3 discourse_parser_endpoint.py > fastapi.log 2>&1 &
-#http://54.82.56.2:8000/docs#/default/analyze_analyze_post
-#
+# fastapi_rst_service.py
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -42,6 +35,34 @@ def analyze_rst1_cached(text: str) -> Dict[str, Any]:
 
 
 # ----------------------------
+# Example RST function
+# ----------------------------
+def analyze_rst1(text: str) -> Dict[str, Any]:
+    """
+    Example placeholder RST analysis.
+    In real code, call your ChatGPT / RST parser here.
+    """
+    # Dummy RST tree
+    tree = {
+        "text": text,
+        "root": {
+            "relation": "root",
+            "nucleus": text,
+            "satellites": []
+        }
+    }
+
+    # Example: find satellite phrases (just dummy split by commas)
+    satellites = [s.strip() for s in text.split(",")[1:]]
+    tree["root"]["satellites"] = satellites
+
+    return {
+        "tree": tree,
+        "satellites_only_with_nucleus": satellites
+    }
+
+
+# ----------------------------
 # POST endpoint
 # ----------------------------
 @app.post("/analyze")
@@ -56,14 +77,6 @@ def analyze(input: TextInput):
 
 # ----------------------------
 # Run server
-#nohup python3 fastapi_rst_service.py > fastapi.log 2>&1 &
-
-#curl -X POST http://<EC2_PUBLIC_IP>:8000/analyze \
-#     -H "Content-Type: application/json" \
-#     -d '{"text":"Developed by Peking University, the toolkit segments EDUs."}'
-
-#ssh -i C:\Users\User\.ssh\aws_ec2_key.pem ec2-user@54.82.56.2
-
 # ----------------------------
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
