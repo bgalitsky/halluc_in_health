@@ -1,0 +1,393 @@
+Loading dataset...
+Extracting discourse-tree features...
+Training main decision tree...
+
+=== Split sizes ===
+Train size: 200
+Test size:  800
+Train hallucination rate: 0.495
+Test hallucination rate:  0.497
+
+=== DecisionTree: Accuracy ===
+1.0
+
+=== DecisionTree: F1 ===
+1.0
+
+=== DecisionTree: Confusion Matrix ===
+[[402   0]
+ [  0 398]]
+
+=== DecisionTree: Classification Report ===
+                   precision    recall  f1-score   support
+
+not_hallucination       1.00      1.00      1.00       402
+    hallucination       1.00      1.00      1.00       398
+
+         accuracy                           1.00       800
+        macro avg       1.00      1.00      1.00       800
+     weighted avg       1.00      1.00      1.00       800
+
+
+=== DecisionTree: Impurity-based Feature Importances ===
+                         feature  impurity_importance
+      dismissive_satellite_ratio                  1.0
+                    has_downplay                  0.0
+                      has_ignore                  0.0
+                   has_overclaim                  0.0
+            has_reinterpretation                  0.0
+              has_generalization                  0.0
+                   has_dismissal                  0.0
+                    has_contrast                  0.0
+                  has_background                  0.0
+                     has_support                  0.0
+                 has_elaboration                  0.0
+                     num_nucleus                  0.0
+                   num_satellite                  0.0
+                  num_conclusion                  0.0
+                    num_segments                  0.0
+         num_grounding_relations                  0.0
+   low_specificity_nucleus_count                  0.0
+  high_specificity_nucleus_count                  0.0
+ low_specificity_satellite_count                  0.0
+high_specificity_satellite_count                  0.0
+       low_specificity_all_count                  0.0
+      high_specificity_all_count                  0.0
+       num_dismissive_satellites                  0.0
+             root_mentions_favor                  0.0
+     root_favors_low_specificity                  0.0
+
+=== DecisionTree: Permutation Importances (f1) ===
+                         feature  perm_mean  perm_std
+      dismissive_satellite_ratio   0.497906  0.020227
+                    has_downplay   0.000000  0.000000
+                      has_ignore   0.000000  0.000000
+                   has_overclaim   0.000000  0.000000
+            has_reinterpretation   0.000000  0.000000
+              has_generalization   0.000000  0.000000
+                   has_dismissal   0.000000  0.000000
+                    has_contrast   0.000000  0.000000
+                  has_background   0.000000  0.000000
+                     has_support   0.000000  0.000000
+                 has_elaboration   0.000000  0.000000
+                     num_nucleus   0.000000  0.000000
+                   num_satellite   0.000000  0.000000
+                  num_conclusion   0.000000  0.000000
+                    num_segments   0.000000  0.000000
+         num_grounding_relations   0.000000  0.000000
+   low_specificity_nucleus_count   0.000000  0.000000
+  high_specificity_nucleus_count   0.000000  0.000000
+ low_specificity_satellite_count   0.000000  0.000000
+high_specificity_satellite_count   0.000000  0.000000
+       low_specificity_all_count   0.000000  0.000000
+      high_specificity_all_count   0.000000  0.000000
+       num_dismissive_satellites   0.000000  0.000000
+             root_mentions_favor   0.000000  0.000000
+     root_favors_low_specificity   0.000000  0.000000
+
+=== Learned Decision Tree ===
+|--- dismissive_satellite_ratio <= 0.17
+|   |--- class: 0
+|--- dismissive_satellite_ratio >  0.17
+|   |--- class: 1
+
+
+=== Highly correlated feature pairs ===
+has_ignore                          has_support                         nan
+has_ignore                          num_conclusion                      nan
+has_ignore                          low_specificity_nucleus_count       0.813
+has_ignore                          high_specificity_satellite_count    0.761
+has_ignore                          root_mentions_favor                 nan
+has_ignore                          satellite_specificity_margin        0.699
+has_ignore                          has_downplay                        0.680
+has_reinterpretation                heuristic_hallucination_score       0.553
+has_ignore                          root_favors_low_specificity         0.543
+has_ignore                          nucleus_specificity_margin          0.523
+has_ignore                          low_specificity_all_count           0.449
+has_ignore                          satellite_high_specificity_ratio    0.379
+has_ignore                          num_dismissive_satellites           0.348
+has_ignore                          dismissive_satellite_ratio          0.334
+has_ignore                          red_flag_ignored                    0.331
+
+Training RandomForest for more stable importances...
+
+=== RandomForest: Accuracy ===
+1.0
+
+=== RandomForest: F1 ===
+1.0
+
+=== RandomForest: Confusion Matrix ===
+[[402   0]
+ [  0 398]]
+
+=== RandomForest: Classification Report ===
+                   precision    recall  f1-score   support
+
+not_hallucination       1.00      1.00      1.00       402
+    hallucination       1.00      1.00      1.00       398
+
+         accuracy                           1.00       800
+        macro avg       1.00      1.00      1.00       800
+     weighted avg       1.00      1.00      1.00       800
+
+
+=== RandomForest: Impurity-based Feature Importances ===
+                        feature  impurity_importance
+  heuristic_hallucination_score             0.151332
+      num_dismissive_satellites             0.141464
+        num_grounding_relations             0.134747
+       grounding_relation_ratio             0.129530
+        contradiction_preserved             0.117827
+     dismissive_satellite_ratio             0.117118
+                   has_contrast             0.041056
+               red_flag_ignored             0.039186
+     all_high_specificity_ratio             0.018273
+                 has_background             0.017833
+ nucleus_high_specificity_ratio             0.015256
+         all_specificity_margin             0.012844
+           has_reinterpretation             0.012246
+     nucleus_specificity_margin             0.011553
+ high_specificity_nucleus_count             0.008408
+      low_specificity_all_count             0.008070
+       conclusion_overconfident             0.005500
+                  has_overclaim             0.003006
+low_specificity_satellite_count             0.002998
+      nucleus_share_of_segments             0.002356
+                    num_nucleus             0.002128
+     high_specificity_all_count             0.002049
+    satellite_share_of_segments             0.001426
+   satellite_specificity_margin             0.001172
+  low_specificity_nucleus_count             0.000888
+
+=== RandomForest: Permutation Importances (f1) ===
+                         feature  perm_mean  perm_std
+                      has_ignore        0.0       0.0
+                    has_downplay        0.0       0.0
+                   has_dismissal        0.0       0.0
+                   has_overclaim        0.0       0.0
+            has_reinterpretation        0.0       0.0
+              has_generalization        0.0       0.0
+                    has_contrast        0.0       0.0
+                  has_background        0.0       0.0
+                 has_elaboration        0.0       0.0
+                     has_support        0.0       0.0
+                    num_segments        0.0       0.0
+                     num_nucleus        0.0       0.0
+                   num_satellite        0.0       0.0
+                  num_conclusion        0.0       0.0
+       num_dismissive_satellites        0.0       0.0
+         num_grounding_relations        0.0       0.0
+   low_specificity_nucleus_count        0.0       0.0
+  high_specificity_nucleus_count        0.0       0.0
+ low_specificity_satellite_count        0.0       0.0
+high_specificity_satellite_count        0.0       0.0
+       low_specificity_all_count        0.0       0.0
+      high_specificity_all_count        0.0       0.0
+             root_mentions_favor        0.0       0.0
+     root_favors_low_specificity        0.0       0.0
+         contradiction_preserved        0.0       0.0
+
+=== Example: valid-like discourse tree (DecisionTree) ===
+{
+  "prediction_label": "not_hallucination",
+  "prediction_numeric": 0,
+  "probabilities": {
+    "not_hallucination": 1.0,
+    "hallucination": 0.0
+  },
+  "features": {
+    "has_ignore": 0,
+    "has_downplay": 0,
+    "has_dismissal": 0,
+    "has_overclaim": 0,
+    "has_reinterpretation": 0,
+    "has_generalization": 0,
+    "has_contrast": 1,
+    "has_background": 0,
+    "has_elaboration": 1,
+    "has_support": 0,
+    "num_segments": 4,
+    "num_nucleus": 2,
+    "num_satellite": 1,
+    "num_conclusion": 1,
+    "num_dismissive_satellites": 0,
+    "num_grounding_relations": 2,
+    "low_specificity_nucleus_count": 0,
+    "high_specificity_nucleus_count": 5,
+    "low_specificity_satellite_count": 1,
+    "high_specificity_satellite_count": 0,
+    "low_specificity_all_count": 1,
+    "high_specificity_all_count": 5,
+    "root_mentions_favor": 1,
+    "root_favors_low_specificity": 0,
+    "contradiction_preserved": 1,
+    "conclusion_overconfident": 0,
+    "red_flag_in_satellite": 0,
+    "red_flag_ignored": 0,
+    "nucleus_specificity_margin": 5,
+    "satellite_specificity_margin": -1,
+    "all_specificity_margin": 4,
+    "nucleus_high_specificity_ratio": 1.0,
+    "satellite_high_specificity_ratio": 0.0,
+    "all_high_specificity_ratio": 0.8333333333333334,
+    "dismissive_satellite_ratio": 0.0,
+    "grounding_relation_ratio": 0.5,
+    "nucleus_share_of_segments": 0.5,
+    "satellite_share_of_segments": 0.25,
+    "heuristic_hallucination_score": -3
+  }
+}
+
+=== Example: hallucination-like discourse tree (DecisionTree) ===
+{
+  "prediction_label": "hallucination",
+  "prediction_numeric": 1,
+  "probabilities": {
+    "not_hallucination": 0.0,
+    "hallucination": 1.0
+  },
+  "features": {
+    "has_ignore": 1,
+    "has_downplay": 1,
+    "has_dismissal": 0,
+    "has_overclaim": 0,
+    "has_reinterpretation": 0,
+    "has_generalization": 0,
+    "has_contrast": 0,
+    "has_background": 0,
+    "has_elaboration": 0,
+    "has_support": 0,
+    "num_segments": 4,
+    "num_nucleus": 1,
+    "num_satellite": 2,
+    "num_conclusion": 1,
+    "num_dismissive_satellites": 2,
+    "num_grounding_relations": 0,
+    "low_specificity_nucleus_count": 1,
+    "high_specificity_nucleus_count": 0,
+    "low_specificity_satellite_count": 1,
+    "high_specificity_satellite_count": 5,
+    "low_specificity_all_count": 2,
+    "high_specificity_all_count": 5,
+    "root_mentions_favor": 1,
+    "root_favors_low_specificity": 1,
+    "contradiction_preserved": 0,
+    "conclusion_overconfident": 0,
+    "red_flag_in_satellite": 1,
+    "red_flag_ignored": 1,
+    "nucleus_specificity_margin": -1,
+    "satellite_specificity_margin": 4,
+    "all_specificity_margin": 3,
+    "nucleus_high_specificity_ratio": 0.0,
+    "satellite_high_specificity_ratio": 0.8333333333333334,
+    "all_high_specificity_ratio": 0.7142857142857143,
+    "dismissive_satellite_ratio": 1.0,
+    "grounding_relation_ratio": 0.0,
+    "nucleus_share_of_segments": 0.25,
+    "satellite_share_of_segments": 0.5,
+    "heuristic_hallucination_score": 14
+  }
+}
+
+=== Example: valid-like discourse tree (RandomForest) ===
+{
+  "prediction_label": "not_hallucination",
+  "prediction_numeric": 0,
+  "probabilities": {
+    "not_hallucination": 1.0,
+    "hallucination": 0.0
+  },
+  "features": {
+    "has_ignore": 0,
+    "has_downplay": 0,
+    "has_dismissal": 0,
+    "has_overclaim": 0,
+    "has_reinterpretation": 0,
+    "has_generalization": 0,
+    "has_contrast": 1,
+    "has_background": 0,
+    "has_elaboration": 1,
+    "has_support": 0,
+    "num_segments": 4,
+    "num_nucleus": 2,
+    "num_satellite": 1,
+    "num_conclusion": 1,
+    "num_dismissive_satellites": 0,
+    "num_grounding_relations": 2,
+    "low_specificity_nucleus_count": 0,
+    "high_specificity_nucleus_count": 5,
+    "low_specificity_satellite_count": 1,
+    "high_specificity_satellite_count": 0,
+    "low_specificity_all_count": 1,
+    "high_specificity_all_count": 5,
+    "root_mentions_favor": 1,
+    "root_favors_low_specificity": 0,
+    "contradiction_preserved": 1,
+    "conclusion_overconfident": 0,
+    "red_flag_in_satellite": 0,
+    "red_flag_ignored": 0,
+    "nucleus_specificity_margin": 5,
+    "satellite_specificity_margin": -1,
+    "all_specificity_margin": 4,
+    "nucleus_high_specificity_ratio": 1.0,
+    "satellite_high_specificity_ratio": 0.0,
+    "all_high_specificity_ratio": 0.8333333333333334,
+    "dismissive_satellite_ratio": 0.0,
+    "grounding_relation_ratio": 0.5,
+    "nucleus_share_of_segments": 0.5,
+    "satellite_share_of_segments": 0.25,
+    "heuristic_hallucination_score": -3
+  }
+}
+
+=== Example: hallucination-like discourse tree (RandomForest) ===
+{
+  "prediction_label": "hallucination",
+  "prediction_numeric": 1,
+  "probabilities": {
+    "not_hallucination": 0.023765246449456975,
+    "hallucination": 0.976234753550543
+  },
+  "features": {
+    "has_ignore": 1,
+    "has_downplay": 1,
+    "has_dismissal": 0,
+    "has_overclaim": 0,
+    "has_reinterpretation": 0,
+    "has_generalization": 0,
+    "has_contrast": 0,
+    "has_background": 0,
+    "has_elaboration": 0,
+    "has_support": 0,
+    "num_segments": 4,
+    "num_nucleus": 1,
+    "num_satellite": 2,
+    "num_conclusion": 1,
+    "num_dismissive_satellites": 2,
+    "num_grounding_relations": 0,
+    "low_specificity_nucleus_count": 1,
+    "high_specificity_nucleus_count": 0,
+    "low_specificity_satellite_count": 1,
+    "high_specificity_satellite_count": 5,
+    "low_specificity_all_count": 2,
+    "high_specificity_all_count": 5,
+    "root_mentions_favor": 1,
+    "root_favors_low_specificity": 1,
+    "contradiction_preserved": 0,
+    "conclusion_overconfident": 0,
+    "red_flag_in_satellite": 1,
+    "red_flag_ignored": 1,
+    "nucleus_specificity_margin": -1,
+    "satellite_specificity_margin": 4,
+    "all_specificity_margin": 3,
+    "nucleus_high_specificity_ratio": 0.0,
+    "satellite_high_specificity_ratio": 0.8333333333333334,
+    "all_high_specificity_ratio": 0.7142857142857143,
+    "dismissive_satellite_ratio": 1.0,
+    "grounding_relation_ratio": 0.0,
+    "nucleus_share_of_segments": 0.25,
+    "satellite_share_of_segments": 0.5,
+    "heuristic_hallucination_score": 14
+  }
+}
