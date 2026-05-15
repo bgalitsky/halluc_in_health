@@ -1,0 +1,100 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram id="ppt-clean-large-font" name="PPT Clean Large Font">
+    <mxGraphModel dx="1359" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title1" value="Reliable Reasoning Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=28;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="20" width="760" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle1" value="Separating Abduction, Deduction, and Induction" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="420" y="60" width="760" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="input1" value="Input&#xa;Observation / Query / Evidence" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#f5f5f5;strokeColor=#666666;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="70" y="120" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="abduction1" value="ABDUCTION&#xa;Generate candidate hypotheses" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="360" y="120" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hypotheses1" value="Candidate Hypotheses&#xa;H1, H2, H3, ..." style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="790" y="120" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="deduction1" value="DEDUCTION&#xa;Test logical consequences" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="70" y="340" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="knowledge1" value="Rules&#xa;Constraints&#xa;Known Facts" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="500" y="370" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="evaluation1" value="Evaluation Outcome&#xa;Supported / Rejected / Revised" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#f8cecc;strokeColor=#b85450;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="840" y="350" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="induction1" value="INDUCTION&#xa;Generalize across repeated cases" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="70" y="530" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="patterns1" value="Generalized Patterns&#xa;Updated heuristics / rules / expectations" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#d4edda;strokeColor=#82b366;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="460" y="570" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="refinement1" value="Knowledge Refinement&#xa;Feeds back into future reasoning" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e8f5e9;strokeColor=#82b366;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="840" y="570" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="interp1" value="Interpretability&#xa;• Abduction = explanation generation&#xa;• Deduction = consequence checking&#xa;• Induction = pattern generalization" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=17;align=left;spacingLeft=10;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="70" y="730" width="460" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="reliability1" value="Reliability&#xa;Hypotheses are not accepted merely because they are fluent or common.&#xa;They must survive deductive and evidential scrutiny." style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=17;align=left;spacingLeft=10;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="620" y="730" width="450" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;" parent="1" source="input1" target="abduction1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;" parent="1" source="abduction1" target="hypotheses1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="candidate explanations" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;" parent="1" source="hypotheses1" target="deduction1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="285" />
+              <mxPoint x="460" y="285" />
+              <mxPoint x="460" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="tested against" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;dashed=1;endArrow=block;endFill=1;fontSize=16;" parent="1" source="knowledge1" target="deduction1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;" parent="1" source="deduction1" target="evaluation1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="360" />
+              <mxPoint x="800" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="across repeated cases" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="505" />
+              <mxPoint x="150" y="505" />
+            </Array>
+            <mxPoint x="870" y="460" as="sourcePoint" />
+            <mxPoint x="150" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;" parent="1" source="induction1" target="patterns1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;endArrow=block;endFill=1;" parent="1" source="patterns1" target="refinement1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7qgTlxFkC8dDVt5rR7PF-3" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="450" width="330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7qgTlxFkC8dDVt5rR7PF-6" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="230" width="330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7qgTlxFkC8dDVt5rR7PF-7" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="640" width="330" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

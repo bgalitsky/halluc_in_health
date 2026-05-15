@@ -1,0 +1,125 @@
+<mxfile host="app.diagrams.net" modified="2026-04-29T00:00:00.000Z" agent="ChatGPT" version="24.7.17">
+  <diagram id="health-abduction-refinement" name="Health Abduction Refinement">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Top knowledge box -->
+        <mxCell id="topBox" value="&lt;b&gt;Statement:&lt;/b&gt; The patient reports fever, cough, and shortness of breath.&lt;br&gt;&lt;b&gt;Hypothesis:&lt;/b&gt; A lung infection may explain the symptoms.&lt;br&gt;&lt;b&gt;Foundation of Physics:&lt;/b&gt; Impaired gas exchange in the lungs can reduce oxygenation and cause dyspnea." style="shape=mxgraph.basic.note;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=18;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="40" width="620" height="135" as="geometry"/>
+        </mxCell>
+
+        <!-- LLM box -->
+        <mxCell id="llm" value="LLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="220" y="275" width="150" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Abduction box -->
+        <mxCell id="abduction" value="Abduction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;fontSize=23;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="700" y="275" width="170" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Symbolic refinement label -->
+        <mxCell id="symRefLabel" value="Symbolic&lt;br&gt;Refinement" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="845" y="200" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Initial explanation -->
+        <mxCell id="initialExplanation" value="&lt;b&gt;Initial Explanation:&lt;/b&gt;&lt;br&gt;The patient has shortness of breath, so the cause is probably general fatigue or anxiety." style="shape=mxgraph.basic.note;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d9534f;fontSize=17;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="110" y="430" width="330" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Refined explanation -->
+        <mxCell id="refinedExplanation" value="&lt;b&gt;Refined Explanation:&lt;/b&gt;&lt;br&gt;A lung infection can inflame the airways and alveoli, impairing oxygen exchange. This can produce fever, cough, and shortness of breath." style="shape=mxgraph.basic.note;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6aa84f;fontSize=17;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="650" y="430" width="350" height="145" as="geometry"/>
+        </mxCell>
+
+        <!-- Invalid red cross -->
+        <mxCell id="redCross" value="✕" style="text;html=1;strokeColor=none;fillColor=none;fontSize=72;fontStyle=1;fontColor=#e83e58;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="620" width="90" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="invalidText" value="Physiologically incomplete,&lt;br&gt;weakly justified." style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="330" y="640" width="260" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Valid green check -->
+        <mxCell id="greenCheck" value="✓" style="text;html=1;strokeColor=none;fillColor=none;fontSize=78;fontStyle=1;fontColor=#2ca24c;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="770" y="620" width="90" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="validText" value="Physically and clinically&lt;br&gt;coherent explanation." style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="890" y="640" width="270" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows from top to LLM and Abduction -->
+        <mxCell id="edgeTopToLLM" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="topBox" target="llm">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="220"/>
+              <mxPoint x="295" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edgeTopToAbduction" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="topBox" target="abduction">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="230"/>
+              <mxPoint x="785" y="230"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LLM to Abduction -->
+        <mxCell id="edgeLLMToAbduction" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="llm" target="abduction">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- LLM to initial explanation -->
+        <mxCell id="edgeLLMToInitial" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="llm" target="initialExplanation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Initial explanation to Abduction dashed -->
+        <mxCell id="edgeInitialToAbduction" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="initialExplanation" target="abduction">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="490"/>
+              <mxPoint x="520" y="315"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Abduction loop / refinement -->
+        <mxCell id="edgeLoop" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="abduction" target="abduction">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="245" as="sourcePoint"/>
+            <mxPoint x="875" y="315" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="925" y="275"/>
+              <mxPoint x="925" y="315"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Abduction to refined explanation -->
+        <mxCell id="edgeAbductionToRefined" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="abduction" target="refinedExplanation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Initial explanation to red cross -->
+        <mxCell id="edgeInitialToCross" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="initialExplanation" target="redCross">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Refined explanation to green check -->
+        <mxCell id="edgeRefinedToCheck" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="refinedExplanation" target="greenCheck">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
