@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Complaint Warrior One-Column Architecture">
+    <mxGraphModel dx="700" dy="900" grid="1" gridSize="10"
+      guides="1" tooltips="1" connect="1" arrows="1"
+      fold="1" page="1" pageScale="1"
+      pageWidth="420" pageHeight="720">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title"
+          value="Complaint Warrior Architecture"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1"
+          vertex="1" parent="1">
+          <mxGeometry x="35" y="20" width="350" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="input"
+          value="Consumer + Company Inputs&#xa;complaint, evidence, goals, responses"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13"
+          vertex="1" parent="1">
+          <mxGeometry x="50" y="95" width="320" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="evidence"
+          value="Evidence Management&#xa;receipts, emails, transcripts, timelines, contradictions"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13"
+          vertex="1" parent="1">
+          <mxGeometry x="50" y="195" width="320" height="75" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="memory"
+          value="Shared Dispute State&#xa;event graph, evidence links, negotiation history, emotional state"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1"
+          vertex="1" parent="1">
+          <mxGeometry x="50" y="305" width="320" height="78" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agents"
+          value="Multi-Agent Orchestration&#xa;negotiation, legal, banking, social escalation, mediation agents"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1"
+          vertex="1" parent="1">
+          <mxGeometry x="50" y="420" width="320" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="prediction"
+          value="Behavioral Prediction&#xa;compromise likelihood, delay tactics, reputation sensitivity"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13"
+          vertex="1" parent="1">
+          <mxGeometry x="50" y="535" width="320" height="72" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="output"
+          value="Negotiation + Escalation Workflows&#xa;settlement, chargeback, social campaign, small-claims package"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1"
+          vertex="1" parent="1">
+          <mxGeometry x="50" y="640" width="320" height="72" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" edge="1" parent="1" source="input" target="evidence"
+          style="endArrow=block;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" edge="1" parent="1" source="evidence" target="memory"
+          style="endArrow=block;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" edge="1" parent="1" source="memory" target="agents"
+          style="endArrow=block;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" edge="1" parent="1" source="agents" target="prediction"
+          style="endArrow=block;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" edge="1" parent="1" source="prediction" target="agents"
+          style="endArrow=block;strokeWidth=2;dashed=1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="570" as="sourcePoint"/>
+            <mxPoint x="385" y="460" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e6" edge="1" parent="1" source="prediction" target="output"
+          style="endArrow=block;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

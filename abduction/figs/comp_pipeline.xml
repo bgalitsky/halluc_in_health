@@ -1,0 +1,111 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram name="Fig. 2 Computational Pipeline for Discourse-Aware ALP" id="alp-pipeline-fig2">
+    <mxGraphModel dx="1359" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Fig. 2. Computational Pipeline for Discourse-Aware Abductive Logic Programming" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F2937;" parent="1" vertex="1">
+          <mxGeometry x="110" y="30" width="1180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="Input Text&#xa;LLM answer, CoT explanation,&#xa;medical/legal/diagnostic narrative" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="160" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="parse" value="1. Discourse Parsing&#xa;Segment into EDUs&#xa;Build RST tree&#xa;Detect nucleus / satellite roles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#EF6C00;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="145" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="rst" value="Discourse Structure&#xa;Cause, Evidence, Condition,&#xa;Contrast, Elaboration, Background" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F9A825;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="335" y="330" width="190" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="extract" value="2. Fact Extraction&#xa;Map each EDU into logical literals&#xa;Identify claims, observations,&#xa;assumptions, and abducibles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="610" y="145" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="literals" value="Logical Literals&#xa;high_fever(P)&#xa;negative_test(P)&#xa;disease(P, pneumonia)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F8E9;strokeColor=#558B2F;fontSize=14;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="630" y="330" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="weights" value="3. Weight Assignment&#xa;Assign nucleus/satellite scores&#xa;Relation-sensitive weighting&#xa;Convert discourse salience into rule strength" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="910" y="145" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="weightedclauses" value="Weighted Clauses&#xa;0.8::high_fever(P)&#xa;0.2::exposure(P)&#xa;penalty + discourse cost" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#AD1457;fontSize=14;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="935" y="330" width="195" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="search" value="4. Abductive Search&#xa;Run weighted ALP solver&#xa;SWI-Prolog + ProbLog / ALP library&#xa;Find minimal explanations satisfying constraints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#00838F;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="470" y="510" width="290" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints" value="Integrity Constraints&#xa;Reject contradicted or inadmissible hypotheses&#xa;Example: no pneumonia if normal X-ray&#xa;and no focal lung findings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="80" y="470" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ranking" value="5. Ranking&#xa;Return top-k abductive hypotheses&#xa;Score by consistency, minimality,&#xa;discourse weight, and probabilistic support" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#4527A0;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="510" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="output" value="Output&#xa;Ranked explanations&#xa;Accepted hypothesis&#xa;Defeated / hallucinated reasoning chain&#xa;Optional corrected explanation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#37474F;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="760" width="1070" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#1565C0;" parent="1" source="input" target="parse" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#EF6C00;" parent="1" source="parse" target="extract" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#2E7D32;" parent="1" source="extract" target="weights" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#4527A0;" parent="1" source="search" target="ranking" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;endArrow=block;endFill=1;strokeColor=#37474F;" parent="1" source="ranking" target="output" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="738" />
+              <mxPoint x="780" y="738" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#F9A825;" parent="1" source="rst" target="weights" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#558B2F;" parent="1" source="literals" target="search" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="725" y="488" />
+              <mxPoint x="660" y="488" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#AD1457;" parent="1" source="weightedclauses" target="search" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="460" />
+              <mxPoint x="615" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#C62828;" parent="1" source="constraints" target="search" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#F9A825;" parent="1" source="parse" target="rst" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#558B2F;" parent="1" source="extract" target="literals" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#AD1457;" parent="1" source="weights" target="weightedclauses" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="feedback" value="Optional feedback:&amp;nbsp;&lt;div&gt;validation results&amp;nbsp;&lt;div&gt;can refine weights&amp;nbsp;&lt;/div&gt;&lt;div&gt;and constraints&lt;/div&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;endArrow=block;endFill=1;strokeColor=#6D4C41;fontSize=12;fontColor=#5D4037;" parent="1" source="ranking" target="weights" edge="1">
+          <mxGeometry x="0.0755" y="-80" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="700" />
+              <mxPoint x="1170" y="700" />
+              <mxPoint x="1170" y="210" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

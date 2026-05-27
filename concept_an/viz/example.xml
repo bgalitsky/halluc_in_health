@@ -1,0 +1,145 @@
+<mxfile host="app.diagrams.net" modified="2026-05-27T00:00:00.000Z" agent="ChatGPT" version="24.7.17">
+  <diagram id="halluc-discourse-tree" name="Hallucination Detection via Discourse Trees">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1"
+      connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400"
+      pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Input discourse trees -->
+        <mxCell id="inputTitle" value="Discourse Trees from Chain-of-Thought Explanations"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="380" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Correct tree -->
+        <mxCell id="correctTree" value="Grounded Reasoning Tree&#xa;• explicit contrast&#xa;• evidence preserved&#xa;• defeaters retained&#xa;• stable nucleus hierarchy"
+          style="shape=mxgraph.basic.tree;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="170" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Hallucinated tree -->
+        <mxCell id="hallucTree" value="Hallucinated Reasoning Tree&#xa;• unsupported nucleus&#xa;• missing contradiction&#xa;• premature closure&#xa;• satellite reinterpretation"
+          style="shape=mxgraph.basic.tree;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;"
+          vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="170" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Graph conversion -->
+        <mxCell id="graphConvert"
+          value="RST / Discourse Graph Construction&#xa;EDUs → nodes&#xa;Relations → labeled edges&#xa;Nucleus/Satellite weighting"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;"
+          vertex="1" parent="1">
+          <mxGeometry x="500" y="150" width="260" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Stable patterns -->
+        <mxCell id="stablePatterns"
+          value="Stable Discourse Pattern Mining&#xa;• recurring subtree motifs&#xa;• contrastive structures&#xa;• abductive fragments&#xa;• contradiction propagation"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="850" y="60" width="280" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Concept extraction -->
+        <mxCell id="concepts"
+          value="Discourse Graph Concepts&#xa;1. Stable nucleus chains&#xa;2. Contrast branches&#xa;3. Defeater structures&#xa;4. Counter-abductive motifs"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="850" y="230" width="280" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- CW / latent alignment -->
+        <mxCell id="cw"
+          value="Latent Alignment Module&#xa;(Concept Whitening / Neuro-Symbolic Projection)&#xa;&#xa;Each latent axis aligned with&#xa;a discourse hallucination concept"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="1220" y="140" width="320" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- latent space -->
+        <mxCell id="latent"
+          value="Aligned Latent Space&#xa;&#xa;Axis 1 → unsupported nucleus&#xa;Axis 2 → contradiction omission&#xa;Axis 3 → defeater suppression&#xa;Axis 4 → abductive instability"
+          style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;"
+          vertex="1" parent="1">
+          <mxGeometry x="1610" y="130" width="300" height="170" as="geometry"/>
+        </mxCell>
+
+        <!-- classifier -->
+        <mxCell id="classifier"
+          value="Hallucination Detection Classifier&#xa;&#xa;Prediction:&#xa;• Grounded reasoning&#xa;• Hallucinated reasoning&#xa;• Uncertain / mixed"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="1220" y="410" width="320" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- metrics -->
+        <mxCell id="metrics"
+          value="Explainability &amp; Analysis&#xa;• Concept activation scores&#xa;• Discourse stability index&#xa;• Counter-abduction probability&#xa;• Hallucination confidence"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;"
+          vertex="1" parent="1">
+          <mxGeometry x="1610" y="400" width="300" height="130" as="geometry"/>
+        </mxCell>
+
+        <!-- arrows -->
+        <mxCell id="e1" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="correctTree" target="graphConvert" as="source"/>
+        </mxCell>
+
+        <mxCell id="e2" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="hallucTree" target="graphConvert" as="source"/>
+        </mxCell>
+
+        <mxCell id="e3" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="graphConvert" target="stablePatterns" as="source"/>
+        </mxCell>
+
+        <mxCell id="e4" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="graphConvert" target="concepts" as="source"/>
+        </mxCell>
+
+        <mxCell id="e5" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="stablePatterns" target="cw" as="source"/>
+        </mxCell>
+
+        <mxCell id="e6" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="concepts" target="cw" as="source"/>
+        </mxCell>
+
+        <mxCell id="e7" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="cw" target="latent" as="source"/>
+        </mxCell>
+
+        <mxCell id="e8" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="cw" target="classifier" as="source"/>
+        </mxCell>
+
+        <mxCell id="e9" edge="1" parent="1"
+          style="endArrow=block;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="classifier" target="metrics" as="source"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
