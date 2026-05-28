@@ -1,0 +1,78 @@
+{
+  "classification_accuracy": 1.0,
+  "classification_macro_f1": 1.0,
+  "concept_axis_accuracy_CAP": 0.33,
+  "label_names": [
+    "grounded",
+    "hallucinated"
+  ],
+  "concept_names": [
+    "consistent_abduction",
+    "contradiction_omission",
+    "contrast_preservation",
+    "defeater_preservation",
+    "defeater_suppression",
+    "evidence_integration",
+    "premature_closure",
+    "qualified_conclusion",
+    "unsupported_nucleus_promotion",
+    "weak_evidence_amplification"
+  ],
+  "feature_columns": [
+    "unsupported_nucleus",
+    "evidence_density",
+    "contrast_density",
+    "closure_strength",
+    "weak_to_strong_inference",
+    "support_balance",
+    "defeater_presence",
+    "nucleus_pressure"
+  ],
+  "classification_report": {
+    "grounded": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    },
+    "hallucinated": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 200.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 200.0
+    }
+  },
+  "scaler_mean": [
+    0.48435875000000017,
+    0.4848212499999995,
+    0.3646112499999991,
+    0.52882375,
+    0.48549750000000036,
+    0.4976537500000001,
+    0.3682437499999997,
+    0.5243650000000003
+  ],
+  "scaler_scale": [
+    0.3141056192563855,
+    0.30311491516987005,
+    0.257183951916595,
+    0.2862834394196379,
+    0.28867508550921056,
+    0.27838233395985745,
+    0.2618849973479531,
+    0.2861765002144657
+  ]
+}
