@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="JKRHM Architecture">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Input -->
+        <mxCell id="cot" value="Chain-of-Thought Explanation" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="20" width="260" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Left Branch -->
+        <mxCell id="embed" value="Embedding Extraction&#10;Jacobian / NTK Analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="geom" value="Geometric Signals (G)&#10;Instability&#10;Sensitivity&#10;Representation Drift" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="220" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Center Branch -->
+        <mxCell id="claim" value="Claim Extraction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="440" y="140" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="abduct" value="Abductive Reasoning&#10;Hypothesis Generation&#10;Defeater Analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="440" y="260" width="220" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="abdscore" value="Abductive Signals (A)&#10;Explanation Cost&#10;Counter-Abduction&#10;Hypothesis Support" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="440" y="400" width="220" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Right Branch -->
+        <mxCell id="parse" value="Discourse Parsing&#10;RST Analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="840" y="140" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tree" value="Discourse Tree&#10;Nucleus/Satellite&#10;Relations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="840" y="250" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="disc" value="Discourse Signals (D)&#10;Contrast Preservation&#10;Defeater Retention&#10;Structural Depth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="840" y="390" width="220" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Aggregation -->
+        <mxCell id="norm" value="Signal Normalization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;strokeWidth=2;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="430" y="600" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agg" value="Weighted Aggregation&#10;JKRHM = αG + βA + γD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="710" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="out" value="Hallucination Risk Score&#10;Grounded ↔ Hallucinated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#333333;strokeWidth=3;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="860" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" edge="1" parent="1" source="cot" target="embed" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="cot" target="claim" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="cot" target="parse" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e4" edge="1" parent="1" source="embed" target="geom" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e5" edge="1" parent="1" source="claim" target="abduct" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="abduct" target="abdscore" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e7" edge="1" parent="1" source="parse" target="tree" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="tree" target="disc" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e9" edge="1" parent="1" source="geom" target="norm" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="abdscore" target="norm" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="disc" target="norm" style="endArrow=block;strokeWidth=2"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e12" edge="1" parent="1" source="norm" target="agg" style="endArrow=block;strokeWidth=3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="agg" target="out" style="endArrow=block;strokeWidth=3"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
