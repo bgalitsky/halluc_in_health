@@ -1,22 +1,32 @@
 {
   "classification_accuracy": 1.0,
   "classification_macro_f1": 1.0,
-  "concept_axis_accuracy_CAP": 0.33,
+  "concept_axis_accuracy_CAP": 0.1869,
   "label_names": [
     "grounded",
     "hallucinated"
   ],
   "concept_names": [
-    "consistent_abduction",
-    "contradiction_omission",
-    "contrast_preservation",
     "defeater_preservation",
-    "defeater_suppression",
-    "evidence_integration",
-    "premature_closure",
-    "qualified_conclusion",
-    "unsupported_nucleus_promotion",
-    "weak_evidence_amplification"
+    "differential_diagnosis_preservation",
+    "infection_vs_autoimmune_contrast",
+    "lab_clinical_alignment",
+    "lab_overweighting",
+    "missing_differential",
+    "multi_organ_integration",
+    "negative_test_overruling_clinical_pattern",
+    "organ_system_fragmentation",
+    "premature_immunosuppression_conclusion",
+    "probabilistic_autoimmune_reasoning",
+    "psychologizing_fatigue",
+    "red_flag_escalation",
+    "red_flag_omission",
+    "risk_aware_conclusion",
+    "single_symptom_autoimmune_fixation",
+    "temporal_coherence",
+    "temporal_pattern_ignored",
+    "test_aware_followup",
+    "unsupported_causal_chain"
   ],
   "feature_columns": [
     "unsupported_nucleus",
@@ -26,53 +36,95 @@
     "weak_to_strong_inference",
     "support_balance",
     "defeater_presence",
-    "nucleus_pressure"
+    "nucleus_pressure",
+    "tree_nodes",
+    "tree_edges",
+    "tree_depth",
+    "nucleus_count",
+    "satellite_count",
+    "contrast_count",
+    "defeater_count",
+    "unsupported_count",
+    "qualification_count",
+    "tree_instability",
+    "qualification_level",
+    "tree_complexity",
+    "immune_ambiguity",
+    "bait_score"
   ],
   "classification_report": {
     "grounded": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 100.0
+      "support": 5000.0
     },
     "hallucinated": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 100.0
+      "support": 5000.0
     },
     "accuracy": 1.0,
     "macro avg": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 200.0
+      "support": 10000.0
     },
     "weighted avg": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 200.0
+      "support": 10000.0
     }
   },
   "scaler_mean": [
-    0.48435875000000017,
-    0.4848212499999995,
-    0.3646112499999991,
-    0.52882375,
-    0.48549750000000036,
-    0.4976537500000001,
-    0.3682437499999997,
-    0.5243650000000003
+    0.49553549999999896,
+    0.5054746499999963,
+    0.4313159999999988,
+    0.5463367499999993,
+    0.5043319000000047,
+    0.5221134749999983,
+    0.414683800000002,
+    0.5236245499999984,
+    13.0,
+    12.0,
+    3.0,
+    2.5,
+    7.5,
+    1.5,
+    1.0,
+    2.5,
+    2.0,
+    0.5151956999999984,
+    0.48618009999999656,
+    0.7920000000005192,
+    0.447965274999996,
+    0.4106387499998892
   ],
   "scaler_scale": [
-    0.3141056192563855,
-    0.30311491516987005,
-    0.257183951916595,
-    0.2862834394196379,
-    0.28867508550921056,
-    0.27838233395985745,
-    0.2618849973479531,
-    0.2861765002144657
+    0.32550159045655563,
+    0.2805553971275131,
+    0.28690696478823574,
+    0.3049856219552605,
+    0.31920738492771406,
+    0.2799707590953454,
+    0.28174562164754063,
+    0.29072273464126824,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.5,
+    0.5,
+    1.0,
+    2.5,
+    2.0,
+    0.32876685622415536,
+    0.30644479358277465,
+    1.0,
+    0.1779893727703261,
+    0.16147485717113544
   ]
 }
