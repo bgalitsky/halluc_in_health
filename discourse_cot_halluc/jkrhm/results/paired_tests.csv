@@ -1,0 +1,2 @@
+baseline,challenger,metric,n_pairs,paired_t_stat,paired_t_p,wilcoxon_stat,wilcoxon_p,mean_delta
+jkrhm_without_discourse,jkrhm_plus_discourse,f1,5,,,0.0,1.0,0.0

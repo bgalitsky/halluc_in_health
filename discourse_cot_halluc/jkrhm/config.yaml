@@ -1,0 +1,82 @@
+project:
+  name: discourse_cot_hallucination_repro
+  description: Reproducibility pipeline for discourse-aware CoT hallucination detection and JKRHM-style scoring.
+  paper_repo: https://github.com/bgalitsky/halluc_in_health/tree/master/discourse_cot_halluc/jkrhm
+  dataset_repo: https://github.com/bgalitsky/halluc_in_health/tree/master/discourse_cot_halluc
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  tree_dir: trees
+  feature_dir: features
+  experiment_dir: experiments
+  result_dir: results
+  prompt_dir: prompts
+
+data:
+  source_priority: [local_files, github_raw_url, synthetic_fallback]
+  local_candidates:
+    - data/raw/structure_correlated_discourse_dataset_500_500_v2.csv
+    - data/raw/synthetic_diagnostic_hallucination_dataset_1000.csv
+    - data/raw/discourse_cot_hallucination_dataset.csv
+  github_raw_candidates:
+    - https://raw.githubusercontent.com/bgalitsky/halluc_in_health/master/discourse_cot_halluc/structure_correlated_discourse_dataset_500_500_v2.csv
+    - https://raw.githubusercontent.com/bgalitsky/halluc_in_health/master/discourse_cot_halluc/synthetic_diagnostic_hallucination_dataset_1000.csv
+    - https://raw.githubusercontent.com/bgalitsky/halluc_in_health/master/discourse_cot_halluc/discourse_cot_hallucination_dataset.csv
+  output_csv: data/processed/dataset.csv
+  synthetic_fallback_size: 1000
+  label_values:
+    grounded: [grounded, no, false, 0, supported]
+    hallucinated: [hallucinated, yes, true, 1, unsupported]
+  column_aliases:
+    id: [id, example_id, case_id]
+    patient_complaint: [patient_complaint, complaint, patient complaint, illness_description, illness description, scenario, question, context]
+    diagnosis: [diagnosis, answer, final_answer, target_diagnosis]
+    reasoning_log: [reasoning_log, reasoning log, cot, chain_of_thought, rationale, explanation, reasoning_trace]
+    discourse_tree: [discourse_tree, discourse tree, custom_tree, rst_tree, tree]
+    hallucination_label: [hallucination_label, hallucination label, label, hallucinated, is_hallucinated, y]
+
+model:
+  generator_name: PLACEHOLDER_MODEL_NAME
+  parser_name: heuristic_parser_v1
+  classifier: logistic_regression
+  temperature: 0.2
+  top_p: 0.95
+  max_output_tokens: 512
+  random_seeds: [13, 21, 42, 87, 101]
+  train_size: 0.70
+  validation_size: 0.10
+  test_size: 0.20
+  early_stopping_metric: f1
+
+features:
+  lexical_style:
+    enabled: true
+    uncertainty_terms: [may, might, possible, possibly, likely, suggests, could, perhaps, uncertain]
+    overconfidence_terms: [clearly, obviously, definitely, certainly, always, never, only, proves, undeniable]
+    unsupported_attribution_terms: [studies show, experts agree, research suggests, generally understood]
+  topology:
+    enabled: true
+  discourse_relations:
+    enabled: true
+    relation_types: [evidence, contrast, concession, elaboration, cause, conclusion, downplay, ignore, red_flag]
+  nucleus_satellite:
+    enabled: true
+  domain_cues:
+    enabled: true
+    medical_terms: [fever, cough, pain, chest, arm, sweating, stiffness, fatigue, rash, joint, diabetes, reflux, gerd, acs, meningitis, flu, arthritis]
+  jkrhm:
+    enabled: true
+    lambda_counter: 0.50
+    mu_discourse: 0.50
+
+thresholds:
+  hallucination_probability: 0.50
+  tpr_at_fpr: [0.10, 0.05]
+
+outputs:
+  trees_jsonl: trees/discourse_trees.jsonl
+  features_csv: features/features.csv
+  metrics_csv: results/metrics_by_seed.csv
+  ablations_csv: results/ablations_by_seed.csv
+  summary_csv: results/summary.csv

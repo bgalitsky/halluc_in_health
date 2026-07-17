@@ -1,0 +1,5 @@
+Segment the reasoning trace into elementary discourse units. For each unit, assign:
+1. relation: evidence, contrast, concession, elaboration, cause, conclusion, downplay, ignore, red_flag, or background;
+2. nuclearity: nucleus or satellite;
+3. role: claim, evidence, counter_evidence, conclusion, downplay, ignored_evidence, or background.
+Return a JSON object with nodes and edges. Do not use the hallucination label.
