@@ -1,0 +1,99 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram name="Abductive Search" id="abductive-search">
+    <mxGraphModel dx="1699" dy="1151" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="obs" value="&lt;b&gt;Observation / Evidence&lt;/b&gt;&lt;br&gt;Facts that require explanation" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=15;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="60" y="30" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="background" value="&lt;b&gt;Background Program P&lt;/b&gt;&lt;br&gt;Domain rules and known facts" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=15;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="60" y="145" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="abducibles" value="&lt;b&gt;Candidate Abducibles A&lt;/b&gt;&lt;br&gt;Admissible missing assumptions" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=15;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="60" y="260" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="constraints" value="&lt;b&gt;Integrity Constraints IC&lt;/b&gt;&lt;br&gt;Contradictions and inadmissible assumptions" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=15;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="60" y="375" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="generate" value="&lt;b&gt;1. Generate Candidate Explanations&lt;/b&gt;&lt;br&gt;&lt;br&gt;Construct hypotheses Δ such that&lt;br&gt;P ∪ Δ can explain the observation" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=16;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="410" y="60" width="300" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="check" value="&lt;b&gt;2. Check Admissibility&lt;/b&gt;&lt;br&gt;&lt;br&gt;Does the explanation satisfy&lt;br&gt;integrity constraints and remain&lt;br&gt;consistent with known facts?" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=16;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="820" y="60" width="300" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="rejectConstraints" value="&lt;b&gt;Reject&lt;/b&gt;&lt;br&gt;Contradicted or inadmissible hypothesis" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=14;fontColor=#9E0000;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="870" y="265" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="minimality" value="&lt;b&gt;3. Enforce Minimality&lt;/b&gt;&lt;br&gt;&lt;br&gt;Remove unnecessary assumptions&lt;br&gt;and retain economical explanations" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=16;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="1190" y="60" width="300" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="counter" value="&lt;b&gt;4. Counter-Abductive Comparison&lt;/b&gt;&lt;br&gt;&lt;br&gt;Generate rival hypotheses and ask:&lt;br&gt;Which explanation accounts for more evidence&lt;br&gt;with fewer assumptions and contradictions?" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=16;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="390" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rank" value="&lt;b&gt;5. Rank Candidate Explanations&lt;/b&gt;&lt;br&gt;&lt;br&gt;Logical consistency • explanatory coverage&lt;br&gt;minimality • discourse salience&lt;br&gt;probabilistic support" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=16;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="590" y="425" width="400" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="accepted" value="✓ &lt;b&gt;Surviving Explanation&lt;/b&gt;&lt;br&gt;&lt;br&gt;Explains the observations using&lt;br&gt;minimal admissible assumptions" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=16;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="420" y="615" width="310" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="hallucinated" value="⚠ &lt;b&gt;Defeated / Hallucinated Chain&lt;/b&gt;&lt;br&gt;&lt;br&gt;Requires invented premises, conflicts with evidence,&lt;br&gt;or is dominated by a stronger explanation" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;           fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=16;fontColor=#9E0000;fontFamily=Helvetica;" parent="1" vertex="1">
+          <mxGeometry x="830" y="615" width="370" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="e_obs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;" parent="1" source="obs" target="generate" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_background" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;" parent="1" source="background" target="generate" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_abducibles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;" parent="1" source="abducibles" target="generate" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_constraints" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#b85450;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="constraints" target="check" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="800" y="400" />
+              <mxPoint x="800" y="188" />
+              <mxPoint x="820" y="188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_generate_check" value="candidate Δ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;           strokeColor=#555555;fontSize=13;" parent="1" source="generate" target="check" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_check_min" value="admissible" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;           strokeColor=#555555;fontSize=13;" parent="1" source="check" target="minimality" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_check_reject" value="fails" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;           strokeColor=#b85450;fontColor=#9E0000;fontSize=13;" parent="1" source="check" target="rejectConstraints" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_min_counter" value="minimal hypotheses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;           strokeColor=#555555;fontSize=13;" parent="1" source="minimality" target="counter" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1340" y="350" />
+              <mxPoint x="1340" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_counter_rank" value="competing explanations" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;           strokeColor=#555555;fontSize=13;" parent="1" source="counter" target="rank" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rank_accept" value="best admissible" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;           strokeColor=#82b366;fontColor=#447A34;fontSize=13;" parent="1" source="rank" target="accepted" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rank_halluc" value="defeated / low-ranked" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;           strokeColor=#b85450;fontColor=#9E0000;fontSize=13;" parent="1" source="rank" target="hallucinated" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="feedback" value="revise / generate alternatives" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;           jettySize=auto;html=1;endArrow=block;endFill=1;dashed=1;           strokeWidth=2;strokeColor=#9673a6;fontColor=#6A4C7D;fontSize=13;" parent="1" source="counter" target="generate" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="240" />
+              <mxPoint x="560" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
