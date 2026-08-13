@@ -1,0 +1,62 @@
+HUMAN EVALUATION INSTRUMENT — CHAPTER 9
+
+Evaluator metadata
+- Participant code: __________________
+- Group: Clinician / AI researcher / General user
+- Dataset and case ID: supplied automatically
+- Verification system: blinded to evaluator
+- Gold hallucination label: blinded to evaluator
+
+PHASE 1 — BEFORE VERIFICATION EXPLANATION
+
+The evaluator reads:
+1. context/evidence;
+2. question;
+3. LLM answer.
+
+Q1. Does the LLM answer contain a hallucination?
+    [ ] Hallucinated
+    [ ] Not hallucinated
+
+Q2. How confident are you in this judgment?
+    0 (no confidence) -------------------------------- 100 (complete confidence)
+
+PHASE 2 — AFTER VERIFICATION EXPLANATION
+
+The evaluator is shown the verifier's explanation.
+
+Q3. Clarity
+    1 Very unclear  2  3  4  5 Very clear
+
+Q4. Coherence
+    1 Very incoherent  2  3  4  5 Very coherent
+
+Q5. Trust
+    1 Very low  2  3  4  5 Very high
+
+Q6. After reading the explanation, what is your hallucination judgment?
+    [ ] Hallucinated
+    [ ] Not hallucinated
+
+Q7. How confident are you now?
+    0 (no confidence) -------------------------------- 100 (complete confidence)
+
+Q8. Which part of the explanation was most useful? (optional)
+    [ ] Abductive support / missing premises
+    [ ] Counter-abductive rival hypotheses
+    [ ] Integrity-constraint violation
+    [ ] Discourse-weighted evidence
+    [ ] Defeat / inconsistency trace
+    [ ] External grounding / retrieval
+
+Q9. Comments (optional):
+    _________________________________________________________________
+    _________________________________________________________________
+
+Scoring
+- Clarity, coherence, and trust are reported on the 1–5 scale.
+- Confidence is divided by 100 for reporting on [0,1].
+- Chapter 9 confidence shift = post-explanation confidence
+  minus pre-explanation confidence.
+- Human hallucination judgments can additionally be evaluated using
+  precision, recall, F1, and accuracy against the hidden gold label.

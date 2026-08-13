@@ -1,0 +1,182 @@
+<mxfile host="app.diagrams.net" modified="2026-08-13T09:39:00.000Z" agent="ChatGPT" version="24.7.17">
+  <diagram id="eval-pipeline" name="Chapter 9 Evaluation Pipeline">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1"
+      connect="1" arrows="1" fold="1" page="1" pageScale="1"
+      pageWidth="1700" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Chapter 9 Evaluation Pipeline"
+          style="text;html=1;align=center;verticalAlign=middle;fontSize=38;fontStyle=1;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="350" y="25" width="1000" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="subtitle"
+          value="Fixed QA test instances → abductive/counter-abductive validation → hallucination decision → computational and human evaluation"
+          style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontColor=#555555;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="210" y="85" width="1280" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="datasets"
+          value="&lt;b&gt;1. Source datasets&lt;/b&gt;&lt;br&gt;&lt;br&gt;TruthfulQA / TruthfulHalluc&lt;br&gt;MedQA + PubMedQA / MedHalluc&lt;br&gt;eSNLI / eSNLI_Halluc&lt;br&gt;HotPotQA"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=22;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="55" y="180" width="300" height="185" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="qa"
+          value="&lt;b&gt;2. QA conversion&lt;/b&gt;&lt;br&gt;&lt;br&gt;Convert source items into&lt;br&gt;question–answer test pairs"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=22;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="420" y="200" width="280" height="145" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="perturb"
+          value="&lt;b&gt;3. Controlled labeling&lt;/b&gt;&lt;br&gt;&lt;br&gt;Inject semantically incompatible&lt;br&gt;facts / circumstances / symptoms&lt;br&gt;→ hallucination-positive cases&lt;br&gt;&lt;br&gt;Unmodified items → negatives"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=21;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="765" y="175" width="340" height="195" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fixed"
+          value="&lt;b&gt;4. Fixed evaluation instance&lt;/b&gt;&lt;br&gt;&lt;br&gt;Question Q&lt;br&gt;Candidate answer A&lt;br&gt;Context / evidence E&lt;br&gt;Gold hallucination label y&lt;br&gt;&lt;br&gt;&lt;i&gt;y is hidden from the evaluated system&lt;/i&gt;"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=22;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="1170" y="170" width="350" height="210" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="discourse"
+          value="&lt;b&gt;5. Discourse representation&lt;/b&gt;&lt;br&gt;&lt;br&gt;RST tree / EDU segmentation&lt;br&gt;Nucleus vs satellite&lt;br&gt;Cause • Evidence • Contrast&lt;br&gt;Condition • Elaboration"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=22;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="180" y="470" width="340" height="185" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="systems"
+          value="&lt;b&gt;6. System under evaluation&lt;/b&gt;&lt;br&gt;&lt;br&gt;Baseline ALP&lt;br&gt;ProbALP&lt;br&gt;D-ALP-Depth&lt;br&gt;D-ALP-Rel&lt;br&gt;Full D-ALP&lt;br&gt;Abductive RAG"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=22;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="600" y="445" width="310" height="235" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="counter"
+          value="&lt;b&gt;7. Abductive / counter-abductive validation&lt;/b&gt;&lt;br&gt;&lt;br&gt;Treat candidate answer as a claim&lt;br&gt;Generate missing premises and rival hypotheses&lt;br&gt;Check integrity constraints and discourse weights&lt;br&gt;Rank explanations and test counter-abductive defeat&lt;br&gt;&lt;br&gt;&lt;i&gt;The system does not regenerate the gold answer.&lt;/i&gt;"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=21;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="990" y="430" width="480" height="265" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="decision"
+          value="&lt;b&gt;8. Hallucination decision&lt;/b&gt;&lt;br&gt;&lt;br&gt;Compute defeat probability&lt;br&gt;&lt;br&gt;P(defeat) &amp;gt; 0.5&lt;br&gt;→ hallucinated&lt;br&gt;&lt;br&gt;otherwise → non-hallucinated"
+          style="rhombus;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=21;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="1085" y="770" width="285" height="210" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="compare"
+          value="&lt;b&gt;9. Compare prediction with gold label&lt;/b&gt;&lt;br&gt;&lt;br&gt;Predicted hallucination status&lt;br&gt;vs. hidden y"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontSize=22;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="690" y="805" width="310" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="metrics"
+          value="&lt;b&gt;Computational metrics&lt;/b&gt;&lt;br&gt;&lt;br&gt;Hallucination-detection F1&lt;br&gt;Average reasoning time&lt;br&gt;Proportion of defeated hypotheses&lt;br&gt;Ablation: depth / relation / full D-ALP"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=22;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="315" y="775" width="320" height="205" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="human"
+          value="&lt;b&gt;Human evaluation&lt;/b&gt;&lt;br&gt;&lt;br&gt;36 participants&lt;br&gt;12 clinicians • 12 AI researchers • 12 general users&lt;br&gt;&lt;br&gt;Rate clarity, coherence, trust&lt;br&gt;Measure pre/post explanation confidence"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=21;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="55" y="760" width="320" height="225" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="alignment"
+          value="&lt;b&gt;Discourse alignment&lt;/b&gt;&lt;br&gt;&lt;br&gt;Compare machine vs. human RST trees&lt;br&gt;Nuclearity F1&lt;br&gt;Rhetorical-relation F1"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontSize=21;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="55" y="1020" width="320" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="external"
+          value="&lt;b&gt;External comparison on RAGTruth&lt;/b&gt;&lt;br&gt;&lt;br&gt;Compare D-ALP against representative&lt;br&gt;internal-state, uncertainty, similarity,&lt;br&gt;consistency, and factual-decomposition baselines&lt;br&gt;&lt;br&gt;Report F1, TPR@10%, TPR@5%"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=21;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="1240" y="1010" width="400" height="175" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="summary"
+          value="&lt;b&gt;Evaluation output&lt;/b&gt;&lt;br&gt;Detection quality • efficiency • logical consistency • interpretability • calibrated trust • discourse alignment • external benchmark performance"
+          style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#333333;strokeWidth=2;fontSize=22;fontStyle=1;fontFamily=Helvetica;"
+          vertex="1" parent="1">
+          <mxGeometry x="455" y="1035" width="700" height="125" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" edge="1" parent="1" source="datasets" target="qa"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="qa" target="perturb"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="perturb" target="fixed"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e4" edge="1" parent="1" source="fixed" target="systems" value="Q, A, E only"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;fontSize=18;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1345" y="410"/><mxPoint x="755" y="410"/></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="e5" edge="1" parent="1" source="fixed" target="discourse" value="answer / explanation text"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#82b366;fontSize=18;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1345" y="405"/><mxPoint x="350" y="405"/></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="e6" edge="1" parent="1" source="discourse" target="systems" value="RST roles + weights"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#82b366;fontSize=18;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="systems" target="counter"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="counter" target="decision" value="defeat score"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#9673a6;fontSize=18;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="decision" target="compare" value="predicted label"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;fontSize=18;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e10" edge="1" parent="1" source="fixed" target="compare" value="hidden gold y"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=1;strokeWidth=2;strokeColor=#b85450;fontColor=#9E0000;fontSize=18;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1550" y="385"/><mxPoint x="1550" y="730"/><mxPoint x="845" y="730"/></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="e11" edge="1" parent="1" source="compare" target="metrics"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e12" edge="1" parent="1" source="counter" target="human" value="system explanation"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#d79b00;fontSize=18;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="965" y="715"/><mxPoint x="215" y="715"/></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="e13" edge="1" parent="1" source="discourse" target="alignment"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="390" y="700"/><mxPoint x="215" y="700"/></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="e14" edge="1" parent="1" source="metrics" target="summary"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="human" target="summary"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#d79b00;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="alignment" target="summary"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#555555;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="e17" edge="1" parent="1" source="systems" target="external" value="external benchmark branch"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=1;strokeWidth=2;strokeColor=#6c8ebf;fontSize=18;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="940" y="560"/><mxPoint x="1600" y="560"/><mxPoint x="1600" y="980"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="external" target="summary"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#6c8ebf;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
