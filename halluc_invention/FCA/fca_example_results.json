@@ -1,0 +1,244 @@
+{
+  "description": "Deterministic toy example, not empirical benchmark results",
+  "concepts": [
+    {
+      "extent": [
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "intent": [
+        "a"
+      ],
+      "support": 3
+    },
+    {
+      "extent": [
+        "K1",
+        "K2"
+      ],
+      "intent": [
+        "a",
+        "b"
+      ],
+      "support": 2
+    },
+    {
+      "extent": [
+        "K3"
+      ],
+      "intent": [
+        "a",
+        "e"
+      ],
+      "support": 1
+    },
+    {
+      "extent": [
+        "K1"
+      ],
+      "intent": [
+        "a",
+        "b",
+        "c"
+      ],
+      "support": 1
+    },
+    {
+      "extent": [
+        "K2"
+      ],
+      "intent": [
+        "a",
+        "b",
+        "d"
+      ],
+      "support": 1
+    },
+    {
+      "extent": [],
+      "intent": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "support": 0
+    }
+  ],
+  "initial": {
+    "attributes": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "extent": [],
+    "closure": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ],
+    "anchor": "K1",
+    "core": [
+      "a",
+      "b",
+      "c"
+    ],
+    "core_weights": {
+      "K1": 3,
+      "K2": 3,
+      "K3": 1
+    },
+    "structural_class": "incremental",
+    "target_pass": true,
+    "hard_checks": {
+      "not_c_and_d": false,
+      "e_requires_b": true
+    },
+    "supported_novelty": "1/4"
+  },
+  "residual_search": [
+    {
+      "residual": [],
+      "candidate": [
+        "a",
+        "b",
+        "c"
+      ],
+      "feasible": true,
+      "edit_distance": 1,
+      "quality": 0,
+      "objective": 1
+    },
+    {
+      "residual": [
+        "d"
+      ],
+      "candidate": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "feasible": false,
+      "edit_distance": 0,
+      "quality": 0,
+      "objective": null
+    },
+    {
+      "residual": [
+        "e"
+      ],
+      "candidate": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "feasible": true,
+      "edit_distance": 2,
+      "quality": 1,
+      "objective": 0
+    },
+    {
+      "residual": [
+        "d",
+        "e"
+      ],
+      "candidate": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "feasible": false,
+      "edit_distance": 1,
+      "quality": 1,
+      "objective": null
+    }
+  ],
+  "selected_repair": {
+    "attributes": [
+      "a",
+      "b",
+      "c",
+      "e"
+    ],
+    "extent": [],
+    "closure": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ],
+    "anchor": "K1",
+    "core": [
+      "a",
+      "b",
+      "c"
+    ],
+    "core_weights": {
+      "K1": 3,
+      "K2": 2,
+      "K3": 2
+    },
+    "structural_class": "incremental",
+    "target_pass": true,
+    "hard_checks": {
+      "not_c_and_d": true,
+      "e_requires_b": true
+    },
+    "supported_novelty": "1/4"
+  },
+  "weak_candidate": {
+    "attributes": [
+      "c",
+      "e"
+    ],
+    "extent": [],
+    "closure": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ],
+    "anchor": "K3",
+    "core": [
+      "e"
+    ],
+    "core_weights": {
+      "K1": 1,
+      "K2": 0,
+      "K3": 1
+    },
+    "structural_class": "weakly_anchored",
+    "target_pass": false,
+    "hard_checks": {
+      "not_c_and_d": true,
+      "e_requires_b": false
+    },
+    "supported_novelty": "2/3"
+  },
+  "toy_evidence": {
+    "score": "4/5",
+    "threshold": "11/20",
+    "passes": true
+  },
+  "empty_extent_counterexample": {
+    "unrestricted_novelty": "0",
+    "supported_novelty": "1/2"
+  },
+  "classification_gap_counterexample": {
+    "jaccard_K1": "1/5",
+    "jaccard_K2": "1/21",
+    "corrected_anchor": "K2",
+    "corrected_class": "incremental"
+  }
+}

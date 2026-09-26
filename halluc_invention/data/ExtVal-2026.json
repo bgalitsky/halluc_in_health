@@ -1,0 +1,3302 @@
+[
+  {
+    "question_id": "EV-2026-001",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 1.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-002",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 2.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-003",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 3.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-004",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 4.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-005",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 5.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-006",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 6.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-007",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 7.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-008",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 8.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-009",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 9.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-010",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 10.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-011",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 11.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-012",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 12.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-013",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 13.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-014",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 14.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-015",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 15.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-016",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 16.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-017",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 17.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-018",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 18.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-019",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 19.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-020",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 20.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-021",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 21.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-022",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 22.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-023",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 23.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-024",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 24.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-025",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 25.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-026",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 26.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-027",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 27.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-028",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 28.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-029",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 29.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-030",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 30.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-031",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 31.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-032",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 32.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-033",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 33.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-034",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 34.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-035",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 35.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-036",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 36.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-037",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 37.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-038",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 38.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-039",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 39.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-040",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 40.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-041",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 41.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-042",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 42.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-043",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 43.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-044",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 44.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-045",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 45.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-046",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 46.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-047",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 47.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-048",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 48.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-049",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 49.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-050",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 50.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-051",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 51.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-052",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 52.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-053",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 53.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-054",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 54.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-055",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 55.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-056",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 56.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-057",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 57.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-058",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 58.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-059",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 59.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-060",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 60.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-061",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 61.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-062",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 62.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-063",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 63.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-064",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 64.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-065",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 65.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-066",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 66.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-067",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 67.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-068",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 68.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-069",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 69.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-070",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 70.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-071",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 71.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-072",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 72.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-073",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 73.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-074",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 74.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-075",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 75.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-076",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 76.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-077",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 77.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-078",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 78.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-079",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 79.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-080",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 80.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-081",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 81.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-082",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 82.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-083",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 83.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-084",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 84.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-085",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 85.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-086",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 86.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-087",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 87.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-088",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 88.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-089",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 89.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-090",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 90.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-091",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 91.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-092",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 92.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-093",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 93.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-094",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 94.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-095",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 95.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-096",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 96.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-097",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 97.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-098",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 98.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-099",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 99.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-100",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 100.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-101",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 101.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-102",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 102.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-103",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 103.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-104",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 104.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-105",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 105.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-106",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 106.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-107",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 107.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-108",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 108.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-109",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 109.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-110",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 110.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-111",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 111.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-112",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 112.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-113",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 113.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-114",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 114.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-115",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 115.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-116",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 116.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-117",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 117.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-118",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 118.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-119",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 119.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-120",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 120.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-121",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 121.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-122",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 122.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-123",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 123.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-124",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 124.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-125",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 125.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-126",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 126.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-127",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 127.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-128",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 128.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-129",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 129.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-130",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 130.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-131",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 131.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-132",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 132.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-133",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 133.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-134",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 134.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-135",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 135.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-136",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 136.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-137",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 137.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-138",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 138.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-139",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 139.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-140",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 140.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-141",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 141.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-142",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 142.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-143",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 143.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-144",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 144.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-145",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 145.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-146",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 146.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-147",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 147.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-148",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 148.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-149",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 149.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-150",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 150.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-151",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 151.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-152",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 152.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-153",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 153.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-154",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 154.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-155",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 155.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-156",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 156.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-157",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 157.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-158",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 158.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-159",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 159.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-160",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 160.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-161",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 161.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-162",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 162.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-163",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 163.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-164",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 164.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-165",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 165.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-166",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 166.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-167",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 167.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-168",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 168.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-169",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 169.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-170",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 170.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-171",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 171.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-172",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 172.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-173",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 173.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-174",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 174.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-175",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 175.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-176",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 176.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-177",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 177.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-178",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 178.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-179",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 179.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-180",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 180.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-181",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 181.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-182",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 182.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-183",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 183.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-184",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 184.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-185",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 185.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-186",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 186.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-187",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 187.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-188",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 188.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-189",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 189.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-190",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 190.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-191",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 191.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-192",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 192.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-193",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 193.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-194",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 194.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-195",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 195.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-196",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 196.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-197",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 197.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-198",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 198.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-199",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 199.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-200",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 200.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-201",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 201.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-202",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 202.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-203",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 203.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-204",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 204.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-205",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 205.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-206",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 206.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-207",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 207.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-208",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 208.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-209",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 209.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-210",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 210.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-211",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 211.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-212",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 212.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-213",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 213.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-214",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 214.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-215",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 215.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-216",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 216.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-217",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 217.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-218",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 218.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-219",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 219.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-220",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 220.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-221",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 221.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-222",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 222.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-223",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 223.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-224",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 224.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-225",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 225.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-226",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 226.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-227",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 227.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-228",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 228.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-229",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 229.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-230",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 230.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-231",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 231.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-232",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 232.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-233",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 233.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-234",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 234.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-235",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 235.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-236",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 236.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-237",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 237.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-238",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 238.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-239",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 239.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-240",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 240.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-241",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 241.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-242",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 242.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-243",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 243.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-244",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 244.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-245",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 245.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-246",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 246.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-247",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 247.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-248",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 248.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-249",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 249.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-250",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 250.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-251",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 251.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-252",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 252.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-253",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 253.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-254",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 254.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-255",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 255.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-256",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 256.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-257",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 257.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-258",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 258.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-259",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 259.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-260",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 260.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-261",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 261.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-262",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 262.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-263",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 263.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-264",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 264.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-265",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 265.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-266",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 266.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-267",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 267.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-268",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 268.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-269",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 269.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-270",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 270.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-271",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 271.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-272",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 272.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-273",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 273.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-274",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 274.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-275",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 275.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-276",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 276.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-277",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 277.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-278",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 278.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-279",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 279.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-280",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 280.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-281",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 281.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-282",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 282.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-283",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 283.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-284",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 284.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-285",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 285.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-286",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 286.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-287",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 287.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-288",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 288.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-289",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 289.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-290",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 290.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  },
+  {
+    "question_id": "EV-2026-291",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 291.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-292",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 292.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-293",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 293.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-294",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 294.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-295",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 295.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-296",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 296.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-297",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 297.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-298",
+    "domain": "Chemical process systems",
+    "problem_statement": "Optimize catalytic cracking efficiency under pressure variation in multi-stage column system 298.",
+    "technical_constraints": [
+      "Max temperature 450C",
+      "Residence time < 4.5s",
+      "Minimize coke formation"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-299",
+    "domain": "Systems architecture",
+    "problem_statement": "Design a fault-tolerant decentralized ledger sync protocol for edge telemetry array 299.",
+    "technical_constraints": [
+      "Network partition tolerance",
+      "Max latency 120ms",
+      "State serialization invariant"
+    ],
+    "ground_truth_verification_method": "Analytical Proof / Simulation"
+  },
+  {
+    "question_id": "EV-2026-300",
+    "domain": "Mechanical systems",
+    "problem_statement": "Evaluate structural fatigue life of composite wing sparring under cyclic aerodynamic load profile 300.",
+    "technical_constraints": [
+      "Von Mises stress < safety threshold",
+      "Weight < 45kg",
+      "Elastic deformation limit"
+    ],
+    "ground_truth_verification_method": "Simulation & Field Validation Trace"
+  }
+]

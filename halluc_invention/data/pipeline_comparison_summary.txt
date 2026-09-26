@@ -1,0 +1,19 @@
+==================================================
+        HALL2INVENT BENCHMARK PIPELINE REPORT     
+==================================================
+
+Analyzed Records: 240 extracted domain test cases
+Bootstrap Routine: 10,000 paired resampling cycles
+
+1. HEAD-TO-HEAD ACCEPTABILITY YIELD
+--------------------------------------------------
+Pipeline A: Standard Generation Base   : 0.00% [95% CI: 0.00%, 0.00%]
+Pipeline B: Invention Reinterpretation : 75.83% [95% CI: 70.42%, 81.25%]
+
+2. STATISTICAL TREATMENT EFFECT
+--------------------------------------------------
+Net Difference Absolute Gain           : +75.83 percentage points
+Non-parametric 95% Confidence Interval : [70.42%, 81.25%]
+Statistical Significance Vector        : p < 0.0001 (Highly Significant)
+
+==================================================

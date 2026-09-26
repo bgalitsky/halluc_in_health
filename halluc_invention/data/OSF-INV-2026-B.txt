@@ -1,0 +1,31 @@
+OSF PRE-REGISTRATION DECLARATION TRACKER
+Registry ID: OSF-INV-2026-B
+Registration Date: March 3, 2026
+Status: Frozen / Pre-registered
+Title: Controlled Ablations and Multi-Stage Robustness Evaluation of the Hall2Invent Framework
+
+1. STUDY DESIGN & FACTORIAL PLAN
+- Design type: 2x2 Factorial Matched Ablation Study crossing:
+  a) Core Preservation Policy [Enabled / Disabled]
+  b) Counter-Abductive Generation Loop [Enabled / Disabled]
+- Sample Base: N = 850 active, expert-adjudicated evaluation queries from Hall2Invent dataset.
+- External Validation Set: N = 300 multi-domain questions (ExtVal-2026), unskewed across Chemical, Systems, and Mechanical engineering domains.
+
+2. POWER STATISTICAL ANALYSIS & TARGETS
+- Minimum Power Target: 1 - beta = 0.80 at alpha = 0.01.
+- Targeted Minimum Detectable Effect Size (MDES): Delta = 0.05 (5 percentage points absolute) for primary paired contrasts.
+- Hypothesis Testing Framework: Paired-sample randomization testing over 100,000 within-question permutations. Multiplicity control using step-down Holm-Bonferroni adjustment sequence.
+
+3. PRIMARY ENDPOINTS & FORMAL LEDGER CRITERIA
+- Repair Success Rate: Evaluated strictly over the 642 hallucination-positive subpopulation. Denominator includes all failed or operational-timeout runs (assigned zero value).
+- Screened Invention-Candidate Yield (HIY): Question-level conditional activation mapping. Multiple candidate promotions for a single root question score as a singular positive tracking event.
+- Unsafe Promotion Incidence: Multi-tiered tracking reporting both candidate-level safety ratio and question-level risk breach denominator.
+- Operational Resource Ledger: Triple-isolated accounting separating automated compute elapsed times, token costs, and human expert verification active minutes.
+
+4. PARAMETER CALIBRATION BOUNDARIES
+- Structural parameter validation window (tau_S): Monitored within a stable [1.5, 2.5] search space window via a 5-fold cross-validation grid.
+- Optimization Target: Minimization of validation Brier score with a baseline threshold target <= 0.050.
+
+5. VERIFICATION & REPRODUCIBILITY LOCK
+- Execution Seeds: Master random seed fixed to 4242.
+- Code Drift Control: Complete git diff verification requirement for all modular pipeline variances mapped under software architecture repository release tags.
