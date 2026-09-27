@@ -123,3 +123,64 @@ resolve_faults(failure(insufficient_target_functional_coverage), Initial, Repair
     validate_candidate_constraints(TargetSet, pass),
     Repaired = TargetSet,
     Log = [repair_gateway_promotion_certified].
+
+
+:- module(abductive_solver, [
+    validate_candidate/2,
+    abductive_repair/4
+]).
+
+% Hard Constraint specifications
+% target_passes(+Intent)
+target_passes(Intent) :-
+    member(a, Intent),
+    member(b, Intent).
+
+% integrity_constraints_passed(+Intent)
+integrity_constraints_passed(Intent) :-
+    \+ (member(c, Intent), member(d, Intent)), % \+ (c /\ d)
+    (member(e, Intent) -> member(b, Intent) ; true). % e -> b
+
+% validate_candidate(+Intent, -Status)
+validate_candidate(Intent, pass) :-
+    target_passes(Intent),
+    integrity_constraints_passed(Intent), !.
+validate_candidate(_, fail).
+
+% core_preserving_residual_search(+Core, +AvailableResiduals, -ChosenResidual)
+core_preserving_residual_search(Core, AvailableResiduals, ChosenResidual) :-
+    include(is_feasible_residual(Core), AvailableResiduals, FeasibleResiduals),
+    sort_residuals_by_cost(Core, FeasibleResiduals, [ChosenResidual|_]).
+
+is_feasible_residual(Core, Residual) :-
+    append(Core, Residual, Combined),
+    validate_candidate(Combined, pass).
+
+% sort_residuals_by_cost(+Core, +Residuals, -Sorted)
+sort_residuals_by_cost(Core, Residuals, Sorted) :-
+    map_list_to_pairs(residual_cost(Core), Residuals, Pairs),
+    keysort(Pairs, SortedPairs),
+    pairs_values(SortedPairs, Sorted).
+
+residual_cost(_Core, Residual, Cost) :-
+    % Unit edit distance penalty for elements in Residual, minus weight for optimization fields
+    length(Residual, Len),
+    (member(e, Residual) -> Penalty is Len - 2 ; Penalty is Len),
+    Cost is Penalty.
+
+% abductive_repair(+Core, +InitialResidual, +UniverseAttributes, -RepairedCandidate)
+abductive_repair(Core, _InitialResidual, UniverseAttributes, RepairedCandidate) :-
+    % Subtract Core attributes from the Universe of valid attributes to isolate residual territory
+    subtract(UniverseAttributes, Core, RemainderUniverse),
+    % Generate sub-combinations of the remainder universe
+    subsets(RemainderUniverse, ListOfResiduals),
+    core_preserving_residual_search(Core, ListOfResiduals, BestResidual),
+    append(Core, BestResidual, RepairedCandidate).
+
+subsets([], [[]]).
+subsets([H|T], Sub) :-
+    subsets(T, Sub1),
+    maplist(atom_concat_list(H), Sub1, Sub2),
+    append(Sub1, Sub2, Sub).
+
+atom_concat_list(H, Element, [H|Element]).
