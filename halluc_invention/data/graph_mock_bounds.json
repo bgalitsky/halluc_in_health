@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.2.0-pattern_structure_bounds",
+  "comment": "Structured boundary test cases for verification of multi-layered relational graph-meets matching Section 4.1",
+  "domain_fingerprint": "chemical_process_topology",
+  "reference_artifacts": [
+    {
+      "artifact_id": "K_CHEM_01",
+      "nodes": [
+        {"id": "n1", "label": "catalytic_reactor", "volume_liters": 250},
+        {"id": "n2", "label": "fractional_distillation_column", "stages": 12},
+        {"id": "n3", "label": "reflux_condenser", "efficiency": 0.94}
+      ],
+      "edges": [
+        {"source": "n1", "target": "n2", "relation": "high_pressure_vapor_feed"},
+        {"source": "n2", "target": "n3", "relation": "overhead_distillate_loop"}
+      ]
+    }
+  ],
+  "candidate_inventions": [
+    {
+      "candidate_token": "CAND-GRAPH-001",
+      "target_question_id": "Q-REPAIR-001",
+      "nodes": [
+        {"id": "n1", "label": "catalytic_reactor", "volume_liters": 250},
+        {"id": "n2", "label": "fractional_distillation_column", "stages": 12},
+        {"id": "n4", "label": "plasma_assisted_scrubber", "power_kw": 15.5}
+      ],
+      "edges": [
+        {"source": "n1", "target": "n2", "relation": "high_pressure_vapor_feed"},
+        {"source": "n2", "target": "n4", "relation": "unshielded_effluent_vent"}
+      ],
+      "provenance_trace": {
+        "expected_invariant_core": {
+          "node_ids": ["n1", "n2"],
+          "edge_signatures": ["n1->n2:high_pressure_vapor_feed"]
+        },
+        "boundary_crossing_relations": [
+          {"source": "n2", "target": "n4", "edge_type": "residual_interface_leak"}
+        ]
+      }
+    }
+  ]
+}
